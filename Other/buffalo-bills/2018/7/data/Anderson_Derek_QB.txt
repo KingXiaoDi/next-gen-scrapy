@@ -1,1 +1,0 @@
-{"type": "pass", "gameId": 2018102103, "interceptions": 3, "season": 2018, "playerNameSlug": "derek-anderson", "passingYards": 175, "teamId": "0610", "completions": 20, "esbId": "AND180512", "lastName": "Anderson", "attempts": 31, "week": 7, "team": "buffalo-bills", "position": "QB", "firstName": "Derek", "touchdowns": 0, "playerName": "Derek Anderson"}

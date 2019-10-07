@@ -1,1 +1,0 @@
-{"position": "QB", "team": "green-bay-packers", "esbId": "KIZ080286", "week": 17, "season": 2018, "playerNameSlug": "deshone-kizer", "completions": 16, "teamId": "1800", "gameId": 2018123002, "attempts": 35, "interceptions": 1, "lastName": "Kizer", "firstName": "DeShone", "type": "pass", "playerName": "DeShone Kizer", "passingYards": 132, "touchdowns": 0}

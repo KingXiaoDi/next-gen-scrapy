@@ -1,1 +1,0 @@
-{"position": "QB", "team": "denver-broncos", "esbId": "OSW479182", "week": 15, "season": 2017, "playerNameSlug": "brock-osweiler", "completions": 12, "teamId": "1400", "gameId": 2017121400, "attempts": 17, "interceptions": 0, "lastName": "Osweiler", "firstName": "Brock", "type": "pass", "playerName": "Brock Osweiler", "passingYards": 194, "touchdowns": 2}

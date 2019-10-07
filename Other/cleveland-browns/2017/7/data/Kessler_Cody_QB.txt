@@ -1,1 +1,0 @@
-{"position": "QB", "team": "cleveland-browns", "esbId": "KES701662", "week": 7, "season": 2017, "playerNameSlug": "cody-kessler", "completions": 10, "teamId": "1050", "gameId": 2017102202, "attempts": 19, "interceptions": 1, "lastName": "Kessler", "firstName": "Cody", "type": "pass", "playerName": "Cody Kessler", "passingYards": 121, "touchdowns": 0}

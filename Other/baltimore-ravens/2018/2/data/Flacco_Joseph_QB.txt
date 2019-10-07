@@ -1,1 +1,0 @@
-{"type": "pass", "gameId": 2018091300, "interceptions": 2, "season": 2018, "playerNameSlug": "joe-flacco", "passingYards": 376, "teamId": "0325", "completions": 32, "esbId": "FLA009602", "lastName": "Flacco", "attempts": 55, "week": 2, "team": "baltimore-ravens", "position": "QB", "firstName": "Joseph", "touchdowns": 2, "playerName": "Joe Flacco"}

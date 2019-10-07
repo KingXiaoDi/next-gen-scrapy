@@ -1,1 +1,0 @@
-{"type": "pass", "gameId": 2017111901, "interceptions": 2, "season": 2017, "playerNameSlug": "deshone-kizer", "passingYards": 179, "teamId": "1050", "completions": 16, "esbId": "KIZ080286", "lastName": "Kizer", "attempts": 32, "week": 11, "team": "cleveland-browns", "position": "QB", "firstName": "DeShone", "touchdowns": 1, "playerName": "DeShone Kizer"}

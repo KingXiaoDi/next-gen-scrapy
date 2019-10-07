@@ -1,1 +1,0 @@
-{"type": "pass", "gameId": 2017111903, "interceptions": 2, "season": 2017, "playerNameSlug": "blaine-gabbert", "passingYards": 257, "teamId": "3800", "completions": 22, "esbId": "GAB221145", "lastName": "Gabbert", "attempts": 34, "week": 11, "team": "arizona-cardinals", "position": "QB", "firstName": "Blaine", "touchdowns": 3, "playerName": "Blaine Gabbert"}

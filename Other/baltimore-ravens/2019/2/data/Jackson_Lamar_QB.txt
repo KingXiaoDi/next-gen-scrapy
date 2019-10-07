@@ -1,1 +1,0 @@
-{"type": "pass", "gameId": 2019091500, "interceptions": 0, "season": 2019, "playerNameSlug": "lamar-jackson", "passingYards": 272, "teamId": "0325", "completions": 24, "esbId": "JAC323395", "lastName": "Jackson", "attempts": 37, "week": 2, "team": "baltimore-ravens", "position": "QB", "firstName": "Lamar", "touchdowns": 2, "playerName": "Lamar Jackson"}

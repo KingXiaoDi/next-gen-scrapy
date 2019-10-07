@@ -1,1 +1,0 @@
-{"type": "pass", "gameId": 2017100101, "interceptions": 0, "season": 2017, "playerNameSlug": "tyrod-taylor", "passingYards": 182, "teamId": "0610", "completions": 12, "esbId": "TAY764868", "lastName": "Taylor", "attempts": 20, "week": 4, "team": "buffalo-bills", "position": "QB", "firstName": "Tyrod", "touchdowns": 1, "playerName": "Tyrod Taylor"}

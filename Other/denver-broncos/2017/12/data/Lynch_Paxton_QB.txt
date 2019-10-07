@@ -1,1 +1,0 @@
-{"position": "QB", "team": "denver-broncos", "esbId": "LYN526034", "week": 12, "season": 2017, "playerNameSlug": "paxton-lynch", "completions": 9, "teamId": "1400", "gameId": 2017112610, "attempts": 14, "interceptions": 1, "lastName": "Lynch", "firstName": "Paxton", "type": "pass", "playerName": "Paxton Lynch", "passingYards": 41, "touchdowns": 0}

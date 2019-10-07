@@ -1,1 +1,0 @@
-{"position": "QB", "team": "denver-broncos", "esbId": "SIE461866", "week": 2, "season": 2017, "playerNameSlug": "trevor-siemian", "completions": 22, "teamId": "1400", "gameId": 2017091710, "attempts": 32, "interceptions": 1, "lastName": "Siemian", "firstName": "Trevor", "type": "pass", "playerName": "Trevor Siemian", "passingYards": 231, "touchdowns": 4}

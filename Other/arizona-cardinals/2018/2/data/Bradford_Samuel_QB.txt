@@ -1,1 +1,0 @@
-{"type": "pass", "gameId": 2018091609, "interceptions": 1, "season": 2018, "playerNameSlug": "sam-bradford", "passingYards": 90, "teamId": "3800", "completions": 17, "esbId": "BRA101548", "lastName": "Bradford", "attempts": 27, "week": 2, "team": "arizona-cardinals", "position": "QB", "firstName": "Samuel", "touchdowns": 0, "playerName": "Sam Bradford"}

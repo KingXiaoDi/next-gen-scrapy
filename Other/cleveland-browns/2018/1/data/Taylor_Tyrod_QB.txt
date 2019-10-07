@@ -1,1 +1,0 @@
-{"position": "QB", "team": "cleveland-browns", "esbId": "TAY764868", "week": 1, "season": 2018, "playerNameSlug": "tyrod-taylor", "completions": 15, "teamId": "1050", "gameId": 2018090901, "attempts": 40, "interceptions": 1, "lastName": "Taylor", "firstName": "Tyrod", "type": "pass", "playerName": "Tyrod Taylor", "passingYards": 197, "touchdowns": 1}

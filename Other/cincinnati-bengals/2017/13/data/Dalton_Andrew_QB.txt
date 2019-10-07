@@ -1,1 +1,0 @@
-{"type": "pass", "gameId": 2017120400, "interceptions": 0, "season": 2017, "playerNameSlug": "andy-dalton", "passingYards": 234, "teamId": "0920", "completions": 21, "esbId": "DAL659900", "lastName": "Dalton", "attempts": 36, "week": 13, "team": "cincinnati-bengals", "position": "QB", "firstName": "Andrew", "touchdowns": 2, "playerName": "Andy Dalton"}

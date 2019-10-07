@@ -1,1 +1,0 @@
-{"type": "pass", "gameId": 2017092403, "interceptions": 1, "season": 2017, "playerNameSlug": "mike-glennon", "passingYards": 101, "teamId": "0810", "completions": 15, "esbId": "GLE711694", "lastName": "Glennon", "attempts": 22, "week": 3, "team": "chicago-bears", "position": "QB", "firstName": "Michael", "touchdowns": 1, "playerName": "Mike Glennon"}

@@ -1,1 +1,0 @@
-{"type": "pass", "gameId": 2018011300, "interceptions": 0, "season": 2017, "playerNameSlug": "matt-ryan", "passingYards": 210, "teamId": "0200", "completions": 22, "esbId": "RYA238179", "lastName": "Ryan", "attempts": 36, "week": 19, "team": "atlanta-falcons", "position": "QB", "firstName": "Matthew", "touchdowns": 1, "playerName": "Matt Ryan"}

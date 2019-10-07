@@ -1,1 +1,0 @@
-{"type": "pass", "gameId": 2018122312, "interceptions": 0, "season": 2018, "playerNameSlug": "mitchell-trubisky", "passingYards": 246, "teamId": "0810", "completions": 25, "esbId": "TRU215336", "lastName": "Trubisky", "attempts": 29, "week": 16, "team": "chicago-bears", "position": "QB", "firstName": "Mitchell", "touchdowns": 1, "playerName": "Mitchell Trubisky"}

@@ -1,1 +1,0 @@
-{"type": "pass", "gameId": 2017112600, "interceptions": 0, "season": 2017, "playerNameSlug": "mohamed-sanu", "passingYards": 51, "teamId": "0200", "completions": 1, "esbId": "SAN808447", "lastName": "Sanu", "attempts": 1, "week": 12, "team": "atlanta-falcons", "position": "WR", "firstName": "Mohamed", "touchdowns": 1, "playerName": "Mohamed Sanu"}

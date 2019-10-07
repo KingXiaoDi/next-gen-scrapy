@@ -1,1 +1,0 @@
-{"position": "QB", "team": "dallas-cowboys", "esbId": "PRE285723", "week": 13, "season": 2018, "playerNameSlug": "dak-prescott", "completions": 24, "teamId": "1200", "gameId": 2018112900, "attempts": 28, "interceptions": 0, "lastName": "Prescott", "firstName": "Rayne", "type": "pass", "playerName": "Dak Prescott", "passingYards": 248, "touchdowns": 1}
