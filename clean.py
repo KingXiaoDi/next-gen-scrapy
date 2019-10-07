@@ -77,13 +77,11 @@ if __name__ == '__main__':
 	#image_folders = "Pass_Charts/baltimore-ravens/2019/4"
 	print ("Cleaning images and data...")
 	for folder in image_folders:
-		if 'baltimore-ravens' in folder:
-			if '2019' in folder:
-				print (folder)
-				images = os.listdir(folder)
-				for image in images:
-					if not image.startswith("."): 
-						new_image(os.path.join(folder, image))
-						new_data(folder, image)
+		print (folder)
+		images = os.listdir(folder)
+		for image in images:
+			if not image.startswith("."): 
+				new_image(os.path.join(folder, image))
+				new_data(folder, image)
 	print ("Done.")
 
