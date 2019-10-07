@@ -1,0 +1,1 @@
+{"type": "pass", "gameId": 2018123001, "interceptions": 1, "season": 2018, "playerNameSlug": "josh-allen", "passingYards": 224, "teamId": "0610", "completions": 17, "esbId": "ALL529264", "lastName": "Allen", "attempts": 26, "week": 17, "team": "buffalo-bills", "position": "QB", "firstName": "Joshua", "touchdowns": 3, "playerName": "Josh Allen"}

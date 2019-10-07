@@ -1,0 +1,1 @@
+{"type": "pass", "gameId": 2017111907, "interceptions": 5, "season": 2017, "playerNameSlug": "nathan-peterman", "passingYards": 66, "teamId": "0610", "completions": 6, "esbId": "PET071806", "lastName": "Peterman", "attempts": 14, "week": 11, "team": "buffalo-bills", "position": "QB", "firstName": "Nathan", "touchdowns": 0, "playerName": "Nathan Peterman"}

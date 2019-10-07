@@ -1,0 +1,1 @@
+{"position": "QB", "team": "green-bay-packers", "esbId": "ROD339293", "week": 1, "season": 2019, "playerNameSlug": "aaron-rodgers", "completions": 18, "teamId": "1800", "gameId": 2019090500, "attempts": 30, "interceptions": 0, "lastName": "Rodgers", "firstName": "Aaron", "type": "pass", "playerName": "Aaron Rodgers", "passingYards": 203, "touchdowns": 1}

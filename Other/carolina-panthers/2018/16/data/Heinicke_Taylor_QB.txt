@@ -1,0 +1,1 @@
+{"type": "pass", "gameId": 2018122304, "interceptions": 3, "season": 2018, "playerNameSlug": "taylor-heinicke", "passingYards": 274, "teamId": "0750", "completions": 33, "esbId": "HEI610185", "lastName": "Heinicke", "attempts": 53, "week": 16, "team": "carolina-panthers", "position": "QB", "firstName": "Taylor", "touchdowns": 1, "playerName": "Taylor Heinicke"}

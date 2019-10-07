@@ -1,0 +1,1 @@
+{"type": "pass", "gameId": 2018102801, "interceptions": 0, "season": 2018, "playerNameSlug": "cam-newton", "passingYards": 219, "teamId": "0750", "completions": 21, "esbId": "NEW693984", "lastName": "Newton", "attempts": 29, "week": 8, "team": "carolina-panthers", "position": "QB", "firstName": "Cameron", "touchdowns": 2, "playerName": "Cam Newton"}

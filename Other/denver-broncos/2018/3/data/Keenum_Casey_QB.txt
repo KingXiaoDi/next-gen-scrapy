@@ -1,0 +1,1 @@
+{"position": "QB", "team": "denver-broncos", "esbId": "KEE690598", "week": 3, "season": 2018, "playerNameSlug": "case-keenum", "completions": 22, "teamId": "1400", "gameId": 2018092301, "attempts": 34, "interceptions": 1, "lastName": "Keenum", "firstName": "Casey", "type": "pass", "playerName": "Case Keenum", "passingYards": 192, "touchdowns": 0}

@@ -1,0 +1,1 @@
+{"type": "pass", "gameId": 2018123007, "interceptions": 0, "season": 2018, "playerNameSlug": "kyle-allen", "passingYards": 228, "teamId": "0750", "completions": 16, "esbId": "ALL543234", "lastName": "Allen", "attempts": 27, "week": 17, "team": "carolina-panthers", "position": "QB", "firstName": "Kyle", "touchdowns": 2, "playerName": "Kyle Allen"}

@@ -1,0 +1,1 @@
+{"type": "pass", "gameId": 2017110506, "interceptions": 2, "season": 2017, "playerNameSlug": "joe-flacco", "passingYards": 261, "teamId": "0325", "completions": 34, "esbId": "FLA009602", "lastName": "Flacco", "attempts": 52, "week": 9, "team": "baltimore-ravens", "position": "QB", "firstName": "Joseph", "touchdowns": 2, "playerName": "Joe Flacco"}

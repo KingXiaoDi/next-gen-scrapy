@@ -1,0 +1,1 @@
+{"type": "pass", "gameId": 2017102205, "interceptions": 1, "season": 2017, "playerNameSlug": "drew-stanton", "passingYards": 66, "teamId": "3800", "completions": 5, "esbId": "STA482517", "lastName": "Stanton", "attempts": 14, "week": 7, "team": "arizona-cardinals", "position": "QB", "firstName": "Drew", "touchdowns": 0, "playerName": "Drew Stanton"}

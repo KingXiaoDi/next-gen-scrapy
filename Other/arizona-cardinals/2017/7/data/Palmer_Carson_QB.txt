@@ -1,0 +1,1 @@
+{"type": "pass", "gameId": 2017102205, "interceptions": 1, "season": 2017, "playerNameSlug": "carson-palmer", "passingYards": 122, "teamId": "3800", "completions": 10, "esbId": "PAL249055", "lastName": "Palmer", "attempts": 18, "week": 7, "team": "arizona-cardinals", "position": "QB", "firstName": "Carson", "touchdowns": 0, "playerName": "Carson Palmer"}

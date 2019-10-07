@@ -1,0 +1,1 @@
+{"type": "pass", "gameId": 2018090900, "interceptions": 2, "season": 2018, "playerNameSlug": "nathan-peterman", "passingYards": 24, "teamId": "0610", "completions": 5, "esbId": "PET071806", "lastName": "Peterman", "attempts": 18, "week": 1, "team": "buffalo-bills", "position": "QB", "firstName": "Nathan", "touchdowns": 0, "playerName": "Nathan Peterman"}

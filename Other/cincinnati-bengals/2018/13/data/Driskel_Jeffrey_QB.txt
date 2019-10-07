@@ -1,0 +1,1 @@
+{"type": "pass", "gameId": 2018120201, "interceptions": 1, "season": 2018, "playerNameSlug": "jeff-driskel", "passingYards": 236, "teamId": "0920", "completions": 25, "esbId": "DRI392790", "lastName": "Driskel", "attempts": 38, "week": 13, "team": "cincinnati-bengals", "position": "QB", "firstName": "Jeffrey", "touchdowns": 1, "playerName": "Jeff Driskel"}

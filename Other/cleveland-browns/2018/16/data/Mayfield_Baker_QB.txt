@@ -1,0 +1,1 @@
+{"position": "QB", "team": "cleveland-browns", "esbId": "MAY483453", "week": 16, "season": 2018, "playerNameSlug": "baker-mayfield", "completions": 27, "teamId": "1050", "gameId": 2018122305, "attempts": 37, "interceptions": 0, "lastName": "Mayfield", "firstName": "Baker", "type": "pass", "playerName": "Baker Mayfield", "passingYards": 284, "touchdowns": 3}

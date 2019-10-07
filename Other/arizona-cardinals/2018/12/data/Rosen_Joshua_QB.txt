@@ -1,0 +1,1 @@
+{"type": "pass", "gameId": 2018112508, "interceptions": 1, "season": 2018, "playerNameSlug": "josh-rosen", "passingYards": 105, "teamId": "3800", "completions": 12, "esbId": "ROS357433", "lastName": "Rosen", "attempts": 19, "week": 12, "team": "arizona-cardinals", "position": "QB", "firstName": "Joshua", "touchdowns": 1, "playerName": "Josh Rosen"}

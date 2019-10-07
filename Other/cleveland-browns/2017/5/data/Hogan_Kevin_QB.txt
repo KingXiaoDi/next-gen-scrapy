@@ -1,0 +1,1 @@
+{"type": "pass", "gameId": 2017100801, "interceptions": 1, "season": 2017, "playerNameSlug": "kevin-hogan", "passingYards": 194, "teamId": "1050", "completions": 16, "esbId": "HOG022742", "lastName": "Hogan", "attempts": 19, "week": 5, "team": "cleveland-browns", "position": "QB", "firstName": "Kevin", "touchdowns": 2, "playerName": "Kevin Hogan"}

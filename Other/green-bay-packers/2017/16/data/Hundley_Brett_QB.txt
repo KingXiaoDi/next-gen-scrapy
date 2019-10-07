@@ -1,0 +1,1 @@
+{"position": "QB", "team": "green-bay-packers", "esbId": "HUN005842", "week": 16, "season": 2017, "playerNameSlug": "brett-hundley", "completions": 17, "teamId": "1800", "gameId": 2017122301, "attempts": 40, "interceptions": 2, "lastName": "Hundley", "firstName": "Brett", "type": "pass", "playerName": "Brett Hundley", "passingYards": 130, "touchdowns": 0}

@@ -1,0 +1,1 @@
+{"type": "pass", "gameId": 2018121600, "interceptions": 0, "season": 2018, "playerNameSlug": "mike-glennon", "passingYards": 111, "teamId": "3800", "completions": 10, "esbId": "GLE711694", "lastName": "Glennon", "attempts": 14, "week": 15, "team": "arizona-cardinals", "position": "QB", "firstName": "Michael", "touchdowns": 1, "playerName": "Mike Glennon"}

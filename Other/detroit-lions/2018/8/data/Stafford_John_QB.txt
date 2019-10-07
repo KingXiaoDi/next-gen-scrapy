@@ -1,0 +1,1 @@
+{"position": "QB", "team": "detroit-lions", "esbId": "STA134157", "week": 8, "season": 2018, "playerNameSlug": "matthew-stafford", "completions": 27, "teamId": "1540", "gameId": 2018102804, "attempts": 40, "interceptions": 1, "lastName": "Stafford", "firstName": "John", "type": "pass", "playerName": "Matthew Stafford", "passingYards": 310, "touchdowns": 2}
