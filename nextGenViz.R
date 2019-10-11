@@ -13,6 +13,7 @@ make_Chart <- function(data, name) {
   ymax <- 60
   hashX <- 18.5/6
   yardMarkers <- c(-10, 'LOS', seq(10,60,10))
+  dotSize = max(1, 5-as.integer(nrow(data)/1200))
   hashY <- seq(ymin,ymax)[which(seq(ymin,ymax)%%5!=0)]
   return (ggplot(data, aes(x, y)) +
             scale_fill_manual(values= cols) + 
@@ -36,7 +37,7 @@ make_Chart <- function(data, name) {
                      label = yardMarkers, size = 4, color='white') + 
             annotate("text", x = 160/6+1, y = seq(ymin, ymax, by = 10), 
                      label = yardMarkers, size = 4, color='white') +
-            geom_point(aes(fill=pass_type), shape = 21, size=5))
+            geom_point(aes(fill=pass_type), shape = 21, size=dotSize))
 }
 
 make_Composite_Charts <- function(all, QB, save, fileName) {
@@ -46,6 +47,7 @@ make_Composite_Charts <- function(all, QB, save, fileName) {
   else {
     data <- all %>%
       filter(name == QB)
+    fileName = QB
   }
   plot <- make_Chart(data, fileName)
   ggsave(file=sprintf('%s/%s plot.png', save, fileName), plot, width=11.5, height=8)
@@ -65,7 +67,7 @@ lamar <- all %>%
 for (each in all %>%
      distinct(name) %>%
      pull(name)) {
-  make_Composite_Charts(all, each, save)
+  make_Composite_Charts(all, each, save, each)
 }
 
 lamar %>%
@@ -138,5 +140,6 @@ bengalsD <- all %>%
            (team == 'pittsburgh-steelers' & week == 4)|
            team == 'arizona-cardinals' & week == 5)
 
+make_Chart(all, "all")
 make_Chart(bengalsD, "BengalsD")
-make_Composite_Charts(bengalsD, 'all', save, 'BengalsD')
+make_Composite_Charts(all, 'all', save, 'all')
