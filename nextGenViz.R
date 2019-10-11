@@ -39,7 +39,7 @@ make_Chart <- function(data, name) {
             geom_point(aes(fill=pass_type), shape = 21, size=5))
 }
 
-make_Composite_Charts <- function(all, QB, save) {
+make_Composite_Charts <- function(all, QB, save, fileName) {
   if (QB == 'all') {
     data <- all
   }
@@ -47,21 +47,17 @@ make_Composite_Charts <- function(all, QB, save) {
     data <- all %>%
       filter(name == QB)
   }
-  plot <- make_Chart(data, QB)
-  ggsave(file=sprintf('%s/%s plot.png', save, QB), plot, width=11.5, height=8)
+  plot <- make_Chart(data, fileName)
+  ggsave(file=sprintf('%s/%s plot.png', save, fileName), plot, width=11.5, height=8)
   write_Tweet_Content(data)
   return (plot)
 }
 make_Composite_Charts(all, 'all', save)
 
-all <- read_csv('c:/users/jmost/documents/football/next-gen-scrapy/pass_locations.csv') %>%
+all <- read_csv('../next-gen-scrapy/pass_locations.csv') %>%
   mutate(pass_type = factor(pass_type, levels = c('COMPLETE', 'INCOMPLETE', 'INTERCEPTION', 'TOUCHDOWN')))
 
-all <- read_csv('c:/users/yoshi/documents/football/next-gen-scrapy/pass_locations.csv') %>%
-  mutate(pass_type = factor(pass_type, levels = c('COMPLETE', 'INCOMPLETE', 'INTERCEPTION', 'TOUCHDOWN')))
-
-save <- 'c:/users/jmost/documents/football/next-gen-scrapy/compositeCharts/'
-save <- 'c:/users/yoshi/documents/football/next-gen-scrapy/compositeCharts/'
+save <- '../next-gen-scrapy/compositeCharts'
 
 lamar <- all %>%
   filter(name == 'Lamar Jackson')
@@ -107,8 +103,9 @@ write_Tweet_Content <- function(data) {
   for (QB in data %>%
        distinct(name) %>%
        pull(name)) {
-    df <- data %>%
-      filter(name == QB) %>%
+    tempDF <- data %>% 
+      filter(name == QB)
+    df <- tempDF %>%
       summarize(Com = sum(pass_type == 'COMPLETE') + sum(pass_type == 'TOUCHDOWN'),
                 Att = n(),
                 TD = sum(pass_type == 'TOUCHDOWN'),
@@ -121,11 +118,25 @@ write_Tweet_Content <- function(data) {
                 Att = n(),
                 TD = sum(pass_type == 'TOUCHDOWN'),
                 INT = sum(pass_type == 'INTERCEPTION'))
-    print (missing)
     print (sprintf("%s - %s/%s, %s TD, %s INT, Average AY per Att: %s, Average AY per Com: %s", 
                    QB, df$Com, df$Att, df$TD, df$INT, round(df$AvgAirYardsAtt,2), round(df$AvgAirYards,2)))
     print (sprintf("Missing %s/%s, %s TD, %s INT", 
                    missing$Com, missing$Att, missing$TD, missing$INT))
+    print (sprintf("URL: https://nextgenstats.nfl.com/charts/list/pass/%s/2019/%s", 
+                   tempDF %>% distinct(team) %>% pull(team), 
+                   tempDF %>% distinct(week) %>% pull(week)))
   }
 }
-write_Tweet_Content(ravensD)
+write_Tweet_Content(bengalsD)
+
+make_Composite_Charts(all, 'Andrew Dalton', save)
+
+bengalsD <- all %>%
+  filter((team == 'seattle-seahawks' & week == 1)|
+           (team == 'san-francisco-49ers' & week == 2)|
+           (team == 'buffalo-bills' & week == 3)|
+           (team == 'pittsburgh-steelers' & week == 4)|
+           team == 'arizona-cardinals' & week == 5)
+
+make_Chart(bengalsD, "BengalsD")
+make_Composite_Charts(bengalsD, 'all', save, 'BengalsD')
