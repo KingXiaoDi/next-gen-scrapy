@@ -93,7 +93,7 @@ make_Chart(ravensD, "Ravens D")
 ggsave(file=sprintf('%s/%s plot.png', save, 'Ravens D'), width=11.5, height=8)
 
 
-ravensD %>%
+bengalsD %>%
   summarize(Com = sum(pass_type == 'COMPLETE') + sum(pass_type == 'TOUCHDOWN'),
             Att = n(),
             TD = sum(pass_type == 'TOUCHDOWN'),
@@ -102,6 +102,15 @@ ravensD %>%
             AvgAirYardsAtt = mean(y, na.rm=T))
 
 write_Tweet_Content <- function(data) {
+  statDF <- data %>%
+    summarize(Com = sum(pass_type == 'COMPLETE') + sum(pass_type == 'TOUCHDOWN'),
+              Att = n(),
+              TD = sum(pass_type == 'TOUCHDOWN'),
+              INT = sum(pass_type == 'INTERCEPTION'),
+              AvgAirYards = mean(y[pass_type %in% c('COMPLETE', 'TOUCHDOWN')]),
+              AvgAirYardsAtt = mean(y, na.rm=T))
+  print (sprintf("%s/%s, %s TD, %s INT, Avg AY per Att: %s, Avg AY per Com: %s", 
+                 statDF$Com, statDF$Att, statDF$TD, statDF$INT, round(statDF$AvgAirYardsAtt,2), round(statDF$AvgAirYards,2)))
   for (QB in data %>%
        distinct(name) %>%
        pull(name)) {
@@ -120,11 +129,11 @@ write_Tweet_Content <- function(data) {
                 Att = n(),
                 TD = sum(pass_type == 'TOUCHDOWN'),
                 INT = sum(pass_type == 'INTERCEPTION'))
-    print (sprintf("%s - %s/%s, %s TD, %s INT, Average AY per Att: %s, Average AY per Com: %s", 
+    print (sprintf("%s - %s/%s, %s TD, %s INT, Avg AY per Att: %s, Avg AY per Com: %s", 
                    QB, df$Com, df$Att, df$TD, df$INT, round(df$AvgAirYardsAtt,2), round(df$AvgAirYards,2)))
     print (sprintf("Missing %s/%s, %s TD, %s INT", 
                    missing$Com, missing$Att, missing$TD, missing$INT))
-    print (sprintf("URL: https://nextgenstats.nfl.com/charts/list/pass/%s/2019/%s", 
+    print (sprintf("https://nextgenstats.nfl.com/charts/list/pass/%s/2019/%s", 
                    tempDF %>% distinct(team) %>% pull(team), 
                    tempDF %>% distinct(week) %>% pull(week)))
   }
@@ -142,4 +151,29 @@ bengalsD <- all %>%
 
 make_Chart(all, "all")
 make_Chart(bengalsD, "BengalsD")
+make_Composite_Charts(bengalsD, 'all', save, 'BengalsD')
 make_Composite_Charts(all, 'all', save, 'all')
+bengalsD
+ravensD %>%
+  filter(pass_type == 'TOUCHDOWN')
+
+
+
+all %>%
+  mutate(C = case_when(pass_type %in% c('COMPLETE', 'TOUCHDOWN')~1,
+                              TRUE ~0))
+
+all %>%
+  do(fit = lm(C ~ x + y, data = .))
+
+lm(formula= C ~ x + y, data=all)
+
+ggplot(all, aes(x,y)) +
+  geom_point(aes(fill=C), shape = 21)
+
+
+all %>%
+  filter(week == 5,
+         pass_type %in% c('COMPLETE', 'TOUCHDOWN')) %>%
+  arrange(-y)
+
