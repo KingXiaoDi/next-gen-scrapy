@@ -5,14 +5,14 @@ get_QB_Passes <- function(all, QB) {
             filter(name == QB))
 }
 
-make_Chart <- function(data, name) {
+make_Chart <- function(data, name, LoSname) {
   cols <- c("INTERCEPTION" = "red", "TOUCHDOWN" = '#0072E4', "COMPLETE" = "green", "INCOMPLETE" = "gray")
   xmin <- -160/6
   xmax <- 160/6
   ymin <- -10
   ymax <- 60
   hashX <- 18.5/6
-  yardMarkers <- c(-10, 'LOS', seq(10,60,10))
+  yardMarkers <- c(-10, LoSname, seq(10,60,10))
   dotSize = max(1, 5-as.integer(nrow(data)/1200))
   hashY <- seq(ymin,ymax)[which(seq(ymin,ymax)%%5!=0)]
   return (ggplot(data, aes(x, y)) +
@@ -57,6 +57,9 @@ make_Composite_Charts <- function(all, QB, save, fileName) {
 make_Composite_Charts(all, 'all', save)
 
 all <- read_csv('../next-gen-scrapy/pass_locations.csv') %>%
+  mutate(pass_type = factor(pass_type, levels = c('COMPLETE', 'INCOMPLETE', 'INTERCEPTION', 'TOUCHDOWN')))
+
+lamar <- read_csv('../next-gen-scrapy/lamarWithQT.csv') %>%
   mutate(pass_type = factor(pass_type, levels = c('COMPLETE', 'INCOMPLETE', 'INTERCEPTION', 'TOUCHDOWN')))
 
 save <- '../next-gen-scrapy/compositeCharts'
@@ -157,8 +160,6 @@ bengalsD
 ravensD %>%
   filter(pass_type == 'TOUCHDOWN')
 
-
-
 all %>%
   mutate(C = case_when(pass_type %in% c('COMPLETE', 'TOUCHDOWN')~1,
                               TRUE ~0))
@@ -177,3 +178,17 @@ all %>%
          pass_type %in% c('COMPLETE', 'TOUCHDOWN')) %>%
   arrange(-y)
 
+
+ngWithQT <- inner_join(df, lamar, by=c('q', 'time', 'detail')) %>%
+  select(c(q, time, down, togo, los, passer, target, pass_type, x, y,
+           air_yards, yac, gain, success, detail)) %>%
+  mutate(toSticks = y-togo)
+
+make_Chart(ngWithQT %>%
+             select(-y) %>%
+             rename(y = toSticks),
+           'Week 5 Lamar To Sticks', '0')
+ggsave(file=sprintf('%s/%s plot.png', save, 'Week 5 Lamar To Sticks'), width=11.5, height=8)
+
+ngWithQT %>%
+  arrange(toSticks)
