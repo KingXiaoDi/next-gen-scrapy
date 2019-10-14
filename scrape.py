@@ -67,7 +67,7 @@ for team in teams:
 	for season in ["2019"]:
 		print (team, "\t", season)
 		for week in weeks:
-		#for week in ["5"]:
+		#for week in ["6"]:
 			URL = "https://nextgenstats.nfl.com/charts/list/pass/" + team + "/" + season + "/" + week
 			r = requests.get(URL)
 			print (URL)
@@ -101,5 +101,7 @@ for team in teams:
 					data_file = data_folder + name + ".txt"
 					with open(data_file, 'w') as datafile: 
 						json.dump(chart, datafile)
+			else:
+				print ("No chart\n")
 
 print ("Done.")

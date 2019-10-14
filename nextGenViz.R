@@ -49,12 +49,12 @@ make_Composite_Charts <- function(all, QB, save, fileName) {
       filter(name == QB)
     fileName = QB
   }
-  plot <- make_Chart(data, fileName)
+  plot <- make_Chart(data, fileName, '0')
   ggsave(file=sprintf('%s/%s plot.png', save, fileName), plot, width=11.5, height=8)
   write_Tweet_Content(data)
   return (plot)
 }
-make_Composite_Charts(all, 'all', save)
+make_Composite_Charts(all, 'all', save, 'all test')
 
 all <- read_csv('../next-gen-scrapy/pass_locations.csv') %>%
   mutate(pass_type = factor(pass_type, levels = c('COMPLETE', 'INCOMPLETE', 'INTERCEPTION', 'TOUCHDOWN')))
@@ -152,7 +152,10 @@ bengalsD <- all %>%
            (team == 'pittsburgh-steelers' & week == 4)|
            team == 'arizona-cardinals' & week == 5)
 
-make_Chart(all, "all")
+make_Chart(all, "all", '0')
+make_Chart(all %>%
+             filter(week == 6), "week 6", '0')
+
 make_Chart(bengalsD, "BengalsD")
 make_Composite_Charts(bengalsD, 'all', save, 'BengalsD')
 make_Composite_Charts(all, 'all', save, 'all')
