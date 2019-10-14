@@ -51,58 +51,10 @@ make_Composite_Charts <- function(all, QB, save, fileName) {
   }
   plot <- make_Chart(data, fileName, '0')
   ggsave(file=sprintf('%s/%s plot.png', save, fileName), plot, width=11.5, height=8)
+  print (sprintf('%s/%s plot.png', save, fileName))
   write_Tweet_Content(data)
   return (plot)
 }
-make_Composite_Charts(all, 'all', save, 'all test')
-
-all <- read_csv('../next-gen-scrapy/pass_locations.csv') %>%
-  mutate(pass_type = factor(pass_type, levels = c('COMPLETE', 'INCOMPLETE', 'INTERCEPTION', 'TOUCHDOWN')))
-
-lamar <- read_csv('../next-gen-scrapy/lamarWithQT.csv') %>%
-  mutate(pass_type = factor(pass_type, levels = c('COMPLETE', 'INCOMPLETE', 'INTERCEPTION', 'TOUCHDOWN')))
-
-save <- '../next-gen-scrapy/compositeCharts'
-
-lamar <- all %>%
-  filter(name == 'Lamar Jackson')
-
-for (each in all %>%
-     distinct(name) %>%
-     pull(name)) {
-  make_Composite_Charts(all, each, save, each)
-}
-
-lamar %>%
-  filter(y < 10,
-         y> 0)
-
-
-all %>%
-  filter(y>50)
-
-all %>%
-  arrange(y)
-
-
-ravensD <- all %>%
-  filter((team == 'miami-dolphins' & week == 1)|
-           (team == 'arizona-cardinals' & week == 2)|
-           (team == 'kansas-city-chiefs' & week == 3)|
-           (team == 'cleveland-browns' & week == 4)|
-           team == 'pittsburgh-steelers' & week == 5)
-
-make_Chart(ravensD, "Ravens D")
-ggsave(file=sprintf('%s/%s plot.png', save, 'Ravens D'), width=11.5, height=8)
-
-
-bengalsD %>%
-  summarize(Com = sum(pass_type == 'COMPLETE') + sum(pass_type == 'TOUCHDOWN'),
-            Att = n(),
-            TD = sum(pass_type == 'TOUCHDOWN'),
-            INT = sum(pass_type == 'INTERCEPTION'),
-            AvgAirYards = mean(y[pass_type %in% c('COMPLETE', 'TOUCHDOWN')]),
-            AvgAirYardsAtt = mean(y, na.rm=T))
 
 write_Tweet_Content <- function(data) {
   statDF <- data %>%
@@ -141,6 +93,44 @@ write_Tweet_Content <- function(data) {
                    tempDF %>% distinct(week) %>% pull(week)))
   }
 }
+
+all <- read_csv('../next-gen-scrapy/pass_locations.csv') %>%
+  mutate(pass_type = factor(pass_type, levels = c('COMPLETE', 'INCOMPLETE', 'INTERCEPTION', 'TOUCHDOWN')))
+
+lamar <- read_csv('../next-gen-scrapy/lamarWithQT.csv') %>%
+  mutate(pass_type = factor(pass_type, levels = c('COMPLETE', 'INCOMPLETE', 'INTERCEPTION', 'TOUCHDOWN')))
+
+save <- '../next-gen-scrapy/compositeCharts'
+
+lamar <- all %>%
+  filter(name == 'Lamar Jackson')
+make_Composite_Charts(lamar, 'Lamar Jackson', save, 'Lamar Jackson')
+for (each in all %>%
+     distinct(name) %>%
+     pull(name)) {
+  make_Composite_Charts(all, each, save, each)
+}
+
+ravensD <- all %>%
+  filter((team == 'miami-dolphins' & week == 1)|
+           (team == 'arizona-cardinals' & week == 2)|
+           (team == 'kansas-city-chiefs' & week == 3)|
+           (team == 'cleveland-browns' & week == 4)|
+           team == 'pittsburgh-steelers' & week == 5|
+           team == 'cincinnati-bengals' & week == 6,)
+
+make_Chart(ravensD, "Ravens D", '0')
+ggsave(file=sprintf('%s/%s plot.png', save, 'Ravens D'), width=11.5, height=8)
+
+
+bengalsD %>%
+  summarize(Com = sum(pass_type == 'COMPLETE') + sum(pass_type == 'TOUCHDOWN'),
+            Att = n(),
+            TD = sum(pass_type == 'TOUCHDOWN'),
+            INT = sum(pass_type == 'INTERCEPTION'),
+            AvgAirYards = mean(y[pass_type %in% c('COMPLETE', 'TOUCHDOWN')]),
+            AvgAirYardsAtt = mean(y, na.rm=T))
+
 write_Tweet_Content(bengalsD)
 
 make_Composite_Charts(all, 'Andrew Dalton', save)
@@ -195,3 +185,11 @@ ggsave(file=sprintf('%s/%s plot.png', save, 'Week 5 Lamar To Sticks'), width=11.
 
 ngWithQT %>%
   arrange(toSticks)
+
+
+all %>%
+  filter(week < 3,
+         y >= 20) %>%
+  group_by(name) %>%
+  tally %>%
+  arrange(-n)
