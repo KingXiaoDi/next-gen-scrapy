@@ -104,6 +104,7 @@ save <- '../next-gen-scrapy/compositeCharts'
 
 lamar <- all %>%
   filter(name == 'Lamar Jackson')
+
 make_Composite_Charts(lamar, 'Lamar Jackson', save, 'Lamar Jackson')
 for (each in all %>%
      distinct(name) %>%
@@ -193,3 +194,24 @@ all %>%
   group_by(name) %>%
   tally %>%
   arrange(-n)
+
+
+#lamar %>%
+all %>%
+  mutate(zone = case_when(y<0~1,
+                          y>=0 & y<10~2,
+                          y>=10 & y<20~3,
+                          y>=20~4),
+         complete = case_when(pass_type %in% c('COMPLETE', 'TOUCHDOWN')~1,
+                              TRUE ~0),
+         INT = case_when(pass_type %in% c('INTERCEPTION')~1,
+                              TRUE ~0),
+         TD = case_when(pass_type %in% c('TOUCHDOWN')~1,
+                              TRUE ~0)) %>%
+  group_by(name, zone) %>%
+  summarize(Com = sum(complete),
+            Att = n(),
+            TD = sum(TD),
+            INT = sum(INT)) %>%
+  arrange(zone, -Att) %>% View()
+
