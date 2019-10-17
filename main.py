@@ -106,9 +106,7 @@ def write_pass_locations(image, data, passes):
 	passes = passes.append(df)
 	return passes
 
-
-if __name__ == '__main__':
-
+def get_Weekly_Data(week):
 	clean_path = "Cleaned_Pass_Charts"
 	passes = pd.DataFrame(columns = ["game_id", "team", "week", "name", "pass_type", "x", "y"])
 
@@ -116,12 +114,21 @@ if __name__ == '__main__':
 	data_folders = [folder for folder in pass_chart_folders if folder.split(os.sep)[-1] == "data"]
 
 	print ("Extracting pass locations...")
+	
 	for folder in data_folders:
-		data = os.listdir(folder)
-		print (folder)
-		for data_file in data:
-			if not data_file.startswith("."): 
-				image = get_image(folder, data_file)
-				passes = write_pass_locations(image, os.path.join(folder, data_file), passes)
-	passes.to_csv("pass_locations.csv", index=False, header=True)
+		if week == folder.split('\\')[-2]:
+			data = os.listdir(folder)
+			print (folder)
+			for data_file in data:
+				if not data_file.startswith("."): 
+					image = get_image(folder, data_file)
+					passes = write_pass_locations(image, os.path.join(folder, data_file), passes)
+	passes.to_csv("Pass_Location_Data/pass_locations week {}.csv".format(week), index=False, header=True)
 	print ("Done.")
+
+if __name__ == '__main__':
+	for i in ['1', '2', '3', '4', '5']:
+		print ("Week {}".format(i))
+		get_Weekly_Data(i)
+
+	
