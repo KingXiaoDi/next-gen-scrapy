@@ -1,4 +1,5 @@
 library(tidyverse)
+library(gam)
 
 get_QB_Passes <- function(all, QB) {
   return (all %>%
@@ -94,6 +95,29 @@ write_Tweet_Content <- function(data) {
   }
 }
 
+zone_Data <- function(data) {
+  zoned <- data %>%
+    filter(!is.na(x),
+           !is.na(y)) %>%
+    mutate(complete = case_when(pass_type %in% c('COMPLETE', 'TOUCHDOWN')~1,
+                                TRUE~0),
+           horZone = cut(x, breaks=5, labels = c('1', '2', '3', '4', '5')),
+           vertZone = cut(y, breaks=seq(-10,60,5),
+                          labels=F,
+                              right = F),
+           vertZone = vertZone - 3)
+  return (zoned)
+}
+zone_Data(all) %>%
+  group_by(horZone, vertZone) %>%
+  summarize(Att = n(),
+            Com = sum(complete)) %>%
+  mutate(ComPer = Com/Att) %>%
+  arrange(-ComPer) %>%
+  ggplot() +
+  geom_raster(aes(x=horZone, y=vertZone, fill=ComPer)) +
+  scale_fill_gradient2('RdYlGn')
+
 all <- read_csv('../next-gen-scrapy/pass_locations.csv') %>%
   mutate(pass_type = factor(pass_type, levels = c('COMPLETE', 'INCOMPLETE', 'INTERCEPTION', 'TOUCHDOWN')))
 
@@ -148,9 +172,6 @@ oppD %>%
 
 write_Tweet_Content(oppD)
 
-make_Composite_Charts(all, 'Andrew Dalton', save)
-
-
 oppD %>%
   filter(pass_type == 'INTERCEPTION')
 make_Chart(all, "all", '0')
@@ -164,17 +185,18 @@ bengalsD
 ravensD %>%
   filter(pass_type == 'TOUCHDOWN')
 
-all %>%
+fitData <- all %>%
   mutate(C = case_when(pass_type %in% c('COMPLETE', 'TOUCHDOWN')~1,
                               TRUE ~0))
 
-all %>%
-  do(fit = lm(C ~ x + y, data = .))
+fit <- lm(formula= C ~ y + x*y, data=fitData)
 
-lm(formula= C ~ x + y, data=all)
+gamFit <- gam(C ~ x*y + y, data=fitData)
+summary(gamFit)
 
-ggplot(all, aes(x,y)) +
-  geom_point(aes(fill=C), shape = 21)
+ggplot(fitData, aes(x,y)) +
+  geom_point(aes(fill=as.factor(C)), shape = 21) +
+  scale_fill_manual(values=c('red', 'blue'))
 
 
 all %>%
@@ -199,15 +221,6 @@ ngWithQT %>%
 
 
 all %>%
-  filter(week < 3,
-         y >= 20) %>%
-  group_by(name) %>%
-  tally %>%
-  arrange(-n)
-
-
-#lamar %>%
-all %>%
   mutate(zone = case_when(y<0~1,
                           y>=0 & y<10~2,
                           y>=10 & y<20~3,
@@ -224,3 +237,39 @@ all %>%
             TD = sum(TD),
             INT = sum(INT)) %>%
   arrange(zone, -Att) %>% View()
+
+
+library(gam)
+
+NFL <- gam(C~s(abs(x),df=6)+y, data=fitData)
+summary(NFL)
+
+NFLlm <- lm(C~abs(x)+y, data=fitData)
+plot(NFLlm, se=T)
+
+NFLlog <- glm(C~abs(x)+y,
+              family=binomial,
+              data=fitData)
+summary(NFLlog)
+
+probs <- predict(NFLlog, type='response')
+probs[1:5]
+
+NFLlog
+pred <- predict(NFLlog, fitData, type='response')
+plotFit <- fitData %>%
+  mutate(expC = pred) %>%
+  rename(hor=x,
+         vert=y) %>%
+  group_by(hor, vert) %>%
+  summarize(expC = mean(expC))
+
+prep <- as_tibble(expand.grid(x=seq(-27,27,.01),
+                              y=seq(-10,30, .1)))
+plot <- prep %>%
+  mutate(expC = predict(NFLlog, prep, type='response'))
+
+ggplot(plot, aes(x, y)) +
+  geom_raster(aes(fill=expC)) +
+  scale_fill_gradient2(mid = 'red', high='#01016b')
+
