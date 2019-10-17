@@ -118,13 +118,27 @@ ravensD <- all %>%
            (team == 'kansas-city-chiefs' & week == 3)|
            (team == 'cleveland-browns' & week == 4)|
            team == 'pittsburgh-steelers' & week == 5|
-           team == 'cincinnati-bengals' & week == 6,)
+           team == 'cincinnati-bengals' & week == 6)
 
 make_Chart(ravensD, "Ravens D", '0')
 ggsave(file=sprintf('%s/%s plot.png', save, 'Ravens D'), width=11.5, height=8)
 
+opp <- list('1' = 'cincinnati-bengals',
+            '2' = 'pittsburgh-steelers',
+            '3' = 'new-orleans-saints',
+            '4' = 'arizona-cardinals',
+            '5' = 'los-angeles-rams',
+            '6' = 'cleveland-browns')
 
-bengalsD %>%
+oppD <- all %>%
+  filter(week == names(opp)[1] & team == opp[[1]]|
+           week == names(opp)[2] & team == opp[[2]]|
+           week == names(opp)[3] & team == opp[[3]]|
+           week == names(opp)[4] & team == opp[[4]]|
+           week == names(opp)[5] & team == opp[[5]]|
+           week == names(opp)[6] & team == opp[[6]])
+
+oppD %>%
   summarize(Com = sum(pass_type == 'COMPLETE') + sum(pass_type == 'TOUCHDOWN'),
             Att = n(),
             TD = sum(pass_type == 'TOUCHDOWN'),
@@ -132,23 +146,19 @@ bengalsD %>%
             AvgAirYards = mean(y[pass_type %in% c('COMPLETE', 'TOUCHDOWN')]),
             AvgAirYardsAtt = mean(y, na.rm=T))
 
-write_Tweet_Content(bengalsD)
+write_Tweet_Content(oppD)
 
 make_Composite_Charts(all, 'Andrew Dalton', save)
 
-bengalsD <- all %>%
-  filter((team == 'seattle-seahawks' & week == 1)|
-           (team == 'san-francisco-49ers' & week == 2)|
-           (team == 'buffalo-bills' & week == 3)|
-           (team == 'pittsburgh-steelers' & week == 4)|
-           team == 'arizona-cardinals' & week == 5)
 
+oppD %>%
+  filter(pass_type == 'INTERCEPTION')
 make_Chart(all, "all", '0')
 make_Chart(all %>%
              filter(week == 6), "week 6", '0')
 
-make_Chart(bengalsD, "BengalsD")
-make_Composite_Charts(bengalsD, 'all', save, 'BengalsD')
+make_Chart(oppD, "seahawksD", 'LoS')
+make_Composite_Charts(oppD, 'all', save, 'seahawksD')
 make_Composite_Charts(all, 'all', save, 'all')
 bengalsD
 ravensD %>%
@@ -214,4 +224,3 @@ all %>%
             TD = sum(TD),
             INT = sum(INT)) %>%
   arrange(zone, -Att) %>% View()
-

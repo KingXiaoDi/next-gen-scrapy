@@ -78,10 +78,12 @@ if __name__ == '__main__':
 	print ("Cleaning images and data...")
 	for folder in image_folders:
 		print (folder)
-		images = os.listdir(folder)
-		for image in images:
-			if not image.startswith("."): 
-				new_image(os.path.join(folder, image))
-				new_data(folder, image)
+		if '6' in folder:
+		#sys.exit()
+			images = os.listdir(folder)
+			for image in images:
+				if not image.startswith("."): 
+					new_image(os.path.join(folder, image))
+					new_data(folder, image)
 	print ("Done.")
 
