@@ -101,6 +101,10 @@ zone_Data <- function(data) {
            !is.na(y)) %>%
     mutate(complete = case_when(pass_type %in% c('COMPLETE', 'TOUCHDOWN')~1,
                                 TRUE~0),
+           td = case_when(pass_type %in% c('TOUCHDOWN')~1,
+                                TRUE~0),
+           int = case_when(pass_type %in% c('INTERCEPTION')~1,
+                                TRUE~0),
            horZone = cut(x, breaks=5, labels = c('1', '2', '3', '4', '5')),
            vertZone = cut(y, breaks=seq(-10,60,5),
                           labels=F,
@@ -273,3 +277,26 @@ ggplot(plot, aes(x, y)) +
   geom_raster(aes(fill=expC)) +
   scale_fill_gradient2(mid = 'red', high='#01016b')
 
+summarize_By_Zone <- function(zone) {
+  return (zone %>%
+            group_by(vertZone) %>%
+            summarize(Com = sum(complete),
+                      Att = n(),
+                      TD = sum(td),
+                      INT = sum(int),
+                      AvgX = mean(x)) %>%
+            mutate(PercentofThrows = Att/sum(Att),
+                   PercentofCompletions = Com/sum(Com),
+                   PercentofTD = TD/sum(TD),
+                   PercentofInt = INT/sum(INT))) %>%
+    select(c(vertZone, PercentofTD, PercentofInt, AvgX, PercentofThrows, PercentofCompletions))
+}
+
+seahawks <- summarize_By_Zone(zone_Data(oppD)) 
+league <- summarize_By_Zone(zone_Data(all))
+
+write.csv(inner_join(seahawks, league, by="vertZone",
+                     suffix = c('', '_NFL')) %>%
+            select(1,5,10,6,11,2,7,3,8,4,9),
+          file = 'seahawksD vs league.csv',
+          row.names=F)
