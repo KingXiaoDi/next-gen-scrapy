@@ -112,21 +112,27 @@ zone_Data <- function(data) {
            vertZone = vertZone - 3)
   return (zoned)
 }
-zone_Data(all) %>%
-  group_by(horZone, vertZone) %>%
-  summarize(Att = n(),
-            Com = sum(complete)) %>%
-  mutate(ComPer = Com/Att) %>%
-  arrange(-ComPer) %>%
-  ggplot() +
-  geom_raster(aes(x=horZone, y=vertZone, fill=ComPer)) +
-  scale_fill_gradient2('RdYlGn')
+
+summarize_By_Zone <- function(zone) {
+  return (zone %>%
+            group_by(vertZone) %>%
+            summarize(Com = sum(complete),
+                      Att = n(),
+                      TD = sum(td),
+                      INT = sum(int),
+                      AvgX = mean(x)) %>%
+            mutate(PercentofThrows = Att/sum(Att),
+                   PercentofCompletions = Com/sum(Com),
+                   PercentofTD = TD/sum(TD),
+                   PercentofInt = INT/sum(INT))) %>%
+    select(c(vertZone, PercentofTD, PercentofInt, AvgX, PercentofThrows, PercentofCompletions))
+}
 
 all <- read_csv('../next-gen-scrapy/pass_locations.csv') %>%
   mutate(pass_type = factor(pass_type, levels = c('COMPLETE', 'INCOMPLETE', 'INTERCEPTION', 'TOUCHDOWN')))
 
-lamar <- read_csv('../next-gen-scrapy/lamarWithQT.csv') %>%
-  mutate(pass_type = factor(pass_type, levels = c('COMPLETE', 'INCOMPLETE', 'INTERCEPTION', 'TOUCHDOWN')))
+#lamarQT <- read_csv('../next-gen-scrapy/lamarWithQT.csv') %>%
+#  mutate(pass_type = factor(pass_type, levels = c('COMPLETE', 'INCOMPLETE', 'INTERCEPTION', 'TOUCHDOWN')))
 
 save <- '../next-gen-scrapy/compositeCharts'
 
@@ -185,9 +191,6 @@ make_Chart(all %>%
 make_Chart(oppD, "seahawksD", 'LoS')
 make_Composite_Charts(oppD, 'all', save, 'seahawksD')
 make_Composite_Charts(all, 'all', save, 'all')
-bengalsD
-ravensD %>%
-  filter(pass_type == 'TOUCHDOWN')
 
 fitData <- all %>%
   mutate(C = case_when(pass_type %in% c('COMPLETE', 'TOUCHDOWN')~1,
@@ -203,13 +206,7 @@ ggplot(fitData, aes(x,y)) +
   scale_fill_manual(values=c('red', 'blue'))
 
 
-all %>%
-  filter(week == 5,
-         pass_type %in% c('COMPLETE', 'TOUCHDOWN')) %>%
-  arrange(-y)
-
-
-ngWithQT <- inner_join(df, lamar, by=c('q', 'time', 'detail')) %>%
+ngWithQT <- inner_join(df, lamarQT, by=c('q', 'time', 'detail')) %>%
   select(c(q, time, down, togo, los, passer, target, pass_type, x, y,
            air_yards, yac, gain, success, detail)) %>%
   mutate(toSticks = y-togo)
@@ -219,10 +216,6 @@ make_Chart(ngWithQT %>%
              rename(y = toSticks),
            'Week 5 Lamar To Sticks', '0')
 ggsave(file=sprintf('%s/%s plot.png', save, 'Week 5 Lamar To Sticks'), width=11.5, height=8)
-
-ngWithQT %>%
-  arrange(toSticks)
-
 
 all %>%
   mutate(zone = case_when(y<0~1,
@@ -277,26 +270,29 @@ ggplot(plot, aes(x, y)) +
   geom_raster(aes(fill=expC)) +
   scale_fill_gradient2(mid = 'red', high='#01016b')
 
-summarize_By_Zone <- function(zone) {
-  return (zone %>%
-            group_by(vertZone) %>%
-            summarize(Com = sum(complete),
-                      Att = n(),
-                      TD = sum(td),
-                      INT = sum(int),
-                      AvgX = mean(x)) %>%
-            mutate(PercentofThrows = Att/sum(Att),
-                   PercentofCompletions = Com/sum(Com),
-                   PercentofTD = TD/sum(TD),
-                   PercentofInt = INT/sum(INT))) %>%
-    select(c(vertZone, PercentofTD, PercentofInt, AvgX, PercentofThrows, PercentofCompletions))
-}
-
+lamarZone <- summarize_By_Zone(zone_Data(lamar))
 seahawks <- summarize_By_Zone(zone_Data(oppD)) 
 league <- summarize_By_Zone(zone_Data(all))
 
-write.csv(inner_join(seahawks, league, by="vertZone",
+write.csv(inner_join(lamarZone, league, by="vertZone",
                      suffix = c('', '_NFL')) %>%
             select(1,5,10,6,11,2,7,3,8,4,9),
-          file = 'seahawksD vs league.csv',
+          file = 'lamar vs league.csv',
           row.names=F)
+getwd()
+
+
+summarize_By_Zone(zone_Data(all %>%
+  filter(name == 'Joseph Flacco')))
+
+flacco <- all %>%
+  filter(name == 'Joseph Flacco')
+
+flaccoCom <- flacco %>%
+  filter(pass_type %in% c('COMPLETE', 'TOUCHDOWN'))
+
+flaccoCom %>%
+  mutate(LTE = case_when(y<=8~1,
+                         TRUE ~ 0)) %>%
+  group_by(LTE) %>%
+  tally

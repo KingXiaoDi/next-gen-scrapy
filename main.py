@@ -127,8 +127,6 @@ def get_Weekly_Data(week):
 	print ("Done.")
 
 if __name__ == '__main__':
-	for i in ['1', '2', '3', '4', '5']:
+	for i in ['7']:
 		print ("Week {}".format(i))
-		get_Weekly_Data(i)
-
-	
+		get_Weekly_Data(i)	

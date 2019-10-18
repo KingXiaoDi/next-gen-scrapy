@@ -67,7 +67,7 @@ for team in teams:
 	for season in ["2019"]:
 		print (team, "\t", season)
 		#for week in weeks:
-		for week in ["6"]:
+		for week in ["7"]:
 			URL = "https://nextgenstats.nfl.com/charts/list/pass/" + team + "/" + season + "/" + week
 			r = requests.get(URL)
 			print (URL)
