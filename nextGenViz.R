@@ -152,17 +152,19 @@ ravensD <- all %>%
            (team == 'kansas-city-chiefs' & week == 3)|
            (team == 'cleveland-browns' & week == 4)|
            team == 'pittsburgh-steelers' & week == 5|
-           team == 'cincinnati-bengals' & week == 6)
+           team == 'cincinnati-bengals' & week == 6|
+           team == 'seattle-seahawks' & week == 7)
 
 make_Chart(ravensD, "Ravens D", '0')
 ggsave(file=sprintf('%s/%s plot.png', save, 'Ravens D'), width=11.5, height=8)
 
-opp <- list('1' = 'cincinnati-bengals',
-            '2' = 'pittsburgh-steelers',
-            '3' = 'new-orleans-saints',
-            '4' = 'arizona-cardinals',
-            '5' = 'los-angeles-rams',
-            '6' = 'cleveland-browns')
+opp <- list('1' = 'pittsburgh-steelers',
+            '2' = 'miami-dolphins',
+            '3' = 'new-york-jets',
+            '4' = 'buffalo-bills',
+            '5' = 'washington-redskins',
+            '6' = 'new-york-giants',
+            '7' = 'new-york-jets')
 
 oppD <- all %>%
   filter(week == names(opp)[1] & team == opp[[1]]|
@@ -170,7 +172,8 @@ oppD <- all %>%
            week == names(opp)[3] & team == opp[[3]]|
            week == names(opp)[4] & team == opp[[4]]|
            week == names(opp)[5] & team == opp[[5]]|
-           week == names(opp)[6] & team == opp[[6]])
+           week == names(opp)[6] & team == opp[[6]]|
+           week == names(opp)[7] & team == opp[[7]])
 
 oppD %>%
   summarize(Com = sum(pass_type == 'COMPLETE') + sum(pass_type == 'TOUCHDOWN'),
@@ -188,7 +191,10 @@ make_Chart(all, "all", '0')
 make_Chart(all %>%
              filter(week == 6), "week 6", '0')
 
-make_Chart(oppD, "seahawksD", 'LoS')
+oppName = 'patriotsD'
+make_Chart(oppD, oppName, 'LoS')
+ggsave(file=sprintf('%s/%s plot.png', save, oppName), width=11.5, height=8)
+
 make_Composite_Charts(oppD, 'all', save, 'seahawksD')
 make_Composite_Charts(all, 'all', save, 'all')
 
