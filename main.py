@@ -97,7 +97,6 @@ def write_pass_locations(image, data, passes):
 	if n_inc != 0: 
 		rows_inc = incompletions(image, n_inc)
 		print (rows_inc)
-		sys.exit()
 		pass_df = pass_df.append(rows_inc)
 		pass
 		
@@ -121,17 +120,16 @@ def get_Weekly_Data(week):
 		if week == folder.split('\\')[-2]:
 			data = os.listdir(folder)
 			print (folder)
-			if 'ravens' in folder:
+			"""if 'ravens' in folder:
 				print (folder)
 			else:
-				continue
+				continue"""
 			for data_file in data:
 				if not data_file.startswith("."): 
 					image = get_image(folder, data_file)
 					passes = write_pass_locations(image, os.path.join(folder, data_file), passes)
 					print (passes)
-					sys.exit()
-	#passes.to_csv("Pass_Location_Data/pass_locations week {}.csv".format(week), index=False, header=True)
+	passes.to_csv("Pass_Location_Data/pass_locations week {}.csv".format(week), index=False, header=True)
 	print ("Done.")
 
 if __name__ == '__main__':
