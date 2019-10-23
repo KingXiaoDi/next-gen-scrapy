@@ -131,9 +131,6 @@ summarize_By_Zone <- function(zone) {
 all <- read_csv('../next-gen-scrapy/pass_locations.csv') %>%
   mutate(pass_type = factor(pass_type, levels = c('COMPLETE', 'INCOMPLETE', 'INTERCEPTION', 'TOUCHDOWN')))
 
-#lamarQT <- read_csv('../next-gen-scrapy/lamarWithQT.csv') %>%
-#  mutate(pass_type = factor(pass_type, levels = c('COMPLETE', 'INCOMPLETE', 'INTERCEPTION', 'TOUCHDOWN')))
-
 save <- '../next-gen-scrapy/compositeCharts'
 
 lamar <- all %>%
@@ -187,16 +184,31 @@ write_Tweet_Content(oppD)
 
 oppD %>%
   filter(pass_type == 'INTERCEPTION')
-make_Chart(all, "all", '0')
-make_Chart(all %>%
-             filter(week == 6), "week 6", '0')
 
 oppName = 'patriotsD'
 make_Chart(oppD, oppName, 'LoS')
 ggsave(file=sprintf('%s/%s plot.png', save, oppName), width=11.5, height=8)
 
-make_Composite_Charts(oppD, 'all', save, 'seahawksD')
+oppD %>%
+  filter(y >= 20,
+         pass_type %in% c('INTERCEPTION'))
+
+oppD %>%
+  filter(y >= 20,
+         pass_type %in% c('COMPLETE', 'TOUCHDOWN'))
+
+all %>%
+  filter(y >= 20) %>%
+  summarize(Att = n(),
+            Com = sum(pass_type %in% c('COMPLETE', 'TOUCHDOWN')),
+            td = sum(pass_type %in% c('TOUCHDOWN')),
+            int = sum(pass_type %in% c('INTERCEPTION')))
+
+make_Composite_Charts(oppD, 'all', save, oppName)
 make_Composite_Charts(all, 'all', save, 'all')
+make_Chart(all, "all", '0')
+make_Chart(all %>%
+             filter(week == 6), "week 6", '0')
 
 fitData <- all %>%
   mutate(C = case_when(pass_type %in% c('COMPLETE', 'TOUCHDOWN')~1,
@@ -210,18 +222,6 @@ summary(gamFit)
 ggplot(fitData, aes(x,y)) +
   geom_point(aes(fill=as.factor(C)), shape = 21) +
   scale_fill_manual(values=c('red', 'blue'))
-
-
-ngWithQT <- inner_join(df, lamarQT, by=c('q', 'time', 'detail')) %>%
-  select(c(q, time, down, togo, los, passer, target, pass_type, x, y,
-           air_yards, yac, gain, success, detail)) %>%
-  mutate(toSticks = y-togo)
-
-make_Chart(ngWithQT %>%
-             select(-y) %>%
-             rename(y = toSticks),
-           'Week 5 Lamar To Sticks', '0')
-ggsave(file=sprintf('%s/%s plot.png', save, 'Week 5 Lamar To Sticks'), width=11.5, height=8)
 
 all %>%
   mutate(zone = case_when(y<0~1,
@@ -241,8 +241,6 @@ all %>%
             INT = sum(INT)) %>%
   arrange(zone, -Att) %>% View()
 
-
-library(gam)
 
 NFL <- gam(C~s(abs(x),df=6)+y, data=fitData)
 summary(NFL)
