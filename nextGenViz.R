@@ -190,13 +190,12 @@ make_Chart(oppD, oppName, 'LoS')
 ggsave(file=sprintf('%s/%s plot.png', save, oppName), width=11.5, height=8)
 
 oppD %>% 
-  filter(y>=15,
-         y<20) %>%
+  filter(y>=-100,
+         y<0) %>%
   summarize(Att = n(),
             Com = sum(pass_type %in% c('COMPLETE', 'TOUCHDOWN')),
             td = sum(pass_type %in% c('TOUCHDOWN')),
             int = sum(pass_type %in% c('INTERCEPTION')))
-
 
 oppD %>%
   filter(y >= 20,
@@ -205,7 +204,12 @@ oppD %>%
 oppD %>%
   filter(y >= 20,
          pass_type %in% c('COMPLETE', 'TOUCHDOWN'))
-
+oppD %>%
+  filter(y >= 20) %>%
+  summarize(Att = n(),
+            Com = sum(pass_type %in% c('COMPLETE', 'TOUCHDOWN')),
+            td = sum(pass_type %in% c('TOUCHDOWN')),
+            int = sum(pass_type %in% c('INTERCEPTION')))
 all %>%
   filter(y >= 20) %>%
   summarize(Att = n(),
