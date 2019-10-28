@@ -120,10 +120,6 @@ def get_Weekly_Data(week):
 		if week == folder.split('\\')[-2]:
 			data = os.listdir(folder)
 			print (folder)
-			"""if 'ravens' in folder:
-				print (folder)
-			else:
-				continue"""
 			for data_file in data:
 				if not data_file.startswith("."): 
 					image = get_image(folder, data_file)
@@ -133,6 +129,7 @@ def get_Weekly_Data(week):
 	print ("Done.")
 
 if __name__ == '__main__':
-	for i in ['8']:
+	week = sys.argv[1]
+	for i in [week]:
 		print ("Week {}".format(i))
 		get_Weekly_Data(i)	

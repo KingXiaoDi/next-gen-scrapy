@@ -53,6 +53,9 @@ teams = ["arizona-cardinals",
 	"washington-redskins"
 ]
 
+week = sys.argv[1]
+print (week)
+
 seasons = ["2017", "2018", "2019"]
 
 weeks = ["1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12", "13",
@@ -66,12 +69,11 @@ for team in teams:
 	#for season in seasons:
 	for season in ["2019"]:
 		print (team, "\t", season)
-		#for week in weeks:
-		for week in ["8"]:
+		for week in [week]:
 			URL = "https://nextgenstats.nfl.com/charts/list/pass/" + team + "/" + season + "/" + week
 			r = requests.get(URL)
 			print (URL)
-
+			
 			soup = BeautifulSoup(r.content, "html.parser")
 
 			script = soup.find_all("script", text=pattern)
