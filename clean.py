@@ -78,7 +78,7 @@ if __name__ == '__main__':
 	print ("Cleaning images and data...")
 	for folder in image_folders:
 		print (folder)
-		if '7' in folder:
+		if '8' in folder:
 		#sys.exit()
 			images = os.listdir(folder)
 			for image in images:

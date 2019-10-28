@@ -133,6 +133,6 @@ def get_Weekly_Data(week):
 	print ("Done.")
 
 if __name__ == '__main__':
-	for i in ['7']:
+	for i in ['8']:
 		print ("Week {}".format(i))
 		get_Weekly_Data(i)	
