@@ -11,19 +11,39 @@ all <- read_csv('../next-gen-scrapy/pass_locations.csv') %>%
 lamarQT <- read_csv('../next-gen-scrapy/lamarWithQT.csv') %>%
   mutate(pass_type = factor(pass_type, levels = c('COMPLETE', 'INCOMPLETE', 'INTERCEPTION', 'TOUCHDOWN')))
 
+anti_join(df %>%
+            mutate(date = as.Date(date, '%Y.%m.%d')) %>%
+            filter(type == 'pass',
+                   passer == 'L.Jackson'),
+          lamarQT,
+          by=c('date', 'q', 'time', 'detail'),
+          suffix=c('', '_data')) %>%
+  filter(possession == 'BLT',
+         !is.na(type)) %>%
+  select(date, q, time, detail) %>%
+  arrange(date)
 lamarWithAllData <- inner_join(df %>%
                                  mutate(date = as.Date(date, '%Y.%m.%d')),
                                lamarQT,
                                by=c('date', 'q', 'time', 'detail'),
                                suffix=c('', '_data'))
 
+
 for (each in lamarWithAllData %>%
      distinct(target) %>%
      pull(target)) {
   print (each)
-  make_Composite_Charts_For_Receiver(lamarWithAllData, each, save)
+  #make_Composite_Charts_For_Receiver(lamarWithAllData, each, save)
+  write_Tweet_Content(lamarWithAllData %>%
+                        filter(target == each))
 }
-make_Composite_Charts_For_Receiver(lamarWithAllData,'H.Hurst', save)
+
+for (each in seq(1,4)) {
+  make_Composite_Charts(lamarWithAllData %>%
+                        filter(down == each), 'all', save, sprintf('Down %d', each))
+}
+
+make_Composite_Charts_For_Receiver(lamarWithAllData, 'N.Boyle', save)
 
 save <- '../next-gen-scrapy/compositeCharts'
 
@@ -191,3 +211,28 @@ write.csv(inner_join(lamarZone, league, by="vertZone",
             select(1,5,10,6,11,2,7,3,8,4,9),
           file = 'lamar vs league.csv',
           row.names=F)
+
+write.csv(lamarWithAllData %>%
+  filter(target =='M.Boykin') %>%
+  select(c(date, q, time, y, pass_type)) %>%
+  arrange(-y),
+  file = 'for Ken/temp.csv',
+  row.names=F)
+
+df %>%
+  filter(passer == 'L.Jackson',
+         type == 'pass',
+         down == 1,
+         date == '2019.09.08')# %>%
+#  group_by(date) %>%
+  summarize(Com = sum(complete, na.rm=T),
+            Att = n(),
+            gain = sum(gain, na.rm=T))
+
+df %>%
+  filter(passer == 'L.Jackson',
+         down == 1,
+         gain >= togo)
+df %>%
+  filter(gain == 21,
+         type == 'pass')
