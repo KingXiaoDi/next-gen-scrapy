@@ -1,82 +1,218 @@
-game_id,team,week,name,pass_type,x,y,q,time,detail
-2019100607,baltimore-ravens,5,Lamar Jackson,COMPLETE,-4.20188560832247,8.09952063215775,1,10:21,"(10:21) (Shotgun) L.Jackson pass short middle to M.Andrews to PIT 25 for 10 yards (K.Kelly, M.Fitzpatrick). "
-2019100607,baltimore-ravens,5,Lamar Jackson,INCOMPLETE,-2.08031181074829,12.4003375296479,1,07:29,(7:29) (Shotgun) L.Jackson pass incomplete short middle to M.Brown (C.Sutton). 
-2019100607,baltimore-ravens,5,Lamar Jackson,COMPLETE,7.86206411160909,-1.67386737662742,1,02:41,(2:41) (Shotgun) L.Jackson pass short right to M.Ingram pushed ob at BLT 29 for 4 yards (Te.Edmunds). 
-2019100607,baltimore-ravens,5,Lamar Jackson,INCOMPLETE,-4.6475398682614,5.23001175778954,1,00:56,"(:56) (Shotgun) L.Jackson pass incomplete short middle to M.Brown. Penalty on BLT-O.Brown, Ineligible Downfield Pass, declined. Coverage by 48-Dupree."
-2019100607,baltimore-ravens,5,Lamar Jackson,COMPLETE,-3.57892963854144,2.39803391538663,1,00:52,(:52) (Shotgun) L.Jackson pass short middle to M.Brown to BLT 44 for 8 yards (D.Bush).
-2019100607,baltimore-ravens,5,Lamar Jackson,COMPLETE,6.24933582903166,3.66908858972351,2,14:25,"(14:25) (Shotgun) L.Jackson pass short right to H.Hurst to PIT 36 for 11 yards (J.Haden, M.Barron)."
-2019100607,baltimore-ravens,5,Lamar Jackson,COMPLETE,-16.7596747644226,2.5732517150589,2,13:04,(13:04) (Shotgun) L.Jackson pass short left to H.Hurst to PIT 35 for 2 yards (M.Barron).
-2019100607,baltimore-ravens,5,Lamar Jackson,COMPLETE,-3.52126563678118,5.42010843617767,2,12:21,(12:21) (Shotgun) L.Jackson pass short middle to M.Andrews to PIT 11 for 24 yards (Te.Edmunds; S.Nelson).
-2019100607,baltimore-ravens,5,Lamar Jackson,INCOMPLETE,19.7440128748007,14.3338760005427,2,11:32,(11:32) (Shotgun) L.Jackson pass incomplete short right to W.Snead (S.Nelson). Coverage by 22-Nelson. 
-2019100607,baltimore-ravens,5,Lamar Jackson,TOUCHDOWN,9.38566198013774,14.9725771067235,2,11:26,"(11:26) (Shotgun) L.Jackson pass short right to M.Brown for 11 yards, TOUCHDOWN. "
-2019100607,baltimore-ravens,5,Lamar Jackson,COMPLETE,17.475783477122,-4.99085111758021,2,07:31,(7:31) (Shotgun) L.Jackson pass short right to M.Ingram to BLT 11 for 1 yard (V.Williams; J.Haden). 
-2019100607,baltimore-ravens,5,Lamar Jackson,INTERCEPTION,-3.29824555561017,14.5722219695477,2,06:50,(6:50) (Shotgun) L.Jackson pass short middle intended for M.Andrews INTERCEPTED by K.Kelly at BLT 26. K.Kelly to BLT 16 for 10 yards (M.Andrews). 
-2019100607,baltimore-ravens,5,Lamar Jackson,INTERCEPTION,-24.8945562553845,6.28098484649065,2,00:36,(:36) (Shotgun) L.Jackson pass short left intended for S.Roberts INTERCEPTED by M.Hilton at BLT 26. M.Hilton ran ob at BLT 25 for 1 yard.
-2019100607,baltimore-ravens,5,Lamar Jackson,COMPLETE,2.67951546470953,5.28022731726436,3,10:21,(10:21) (Shotgun) L.Jackson pass short middle to M.Andrews to PIT 49 for 7 yards (Te.Edmunds) [C.Heyward].
-2019100607,baltimore-ravens,5,Lamar Jackson,INTERCEPTION,-10.345191071863,29.6285509333419,3,08:28,"(8:28) (Shotgun) L.Jackson pass deep middle intended for N.Boyle INTERCEPTED by D.Bush at PIT 13. D.Bush to PIT 13 for no gain (N.Boyle). The Replay Official reviewed the interception ruling, and the play was Upheld. The ruling on the field stands. "
-2019100607,baltimore-ravens,5,Lamar Jackson,COMPLETE,-6.13747820384149,3.96953459373842,3,03:05,(3:05) (Shotgun) L.Jackson pass short left to H.Hurst to BLT 41 for 13 yards (J.Haden).
-2019100607,baltimore-ravens,5,Lamar Jackson,COMPLETE,26.3308366100549,6.36816578483248,3,02:19,(2:19) (Shotgun) L.Jackson pass short right to H.Hurst ran ob at BLT 47 for 6 yards.
-2019100607,baltimore-ravens,5,Lamar Jackson,COMPLETE,-8.03042561991949,7.15400770444634,3,01:01,(1:01) (Shotgun) L.Jackson pass short left to W.Snead to PIT 47 for 9 yards (D.Bush).
-2019100607,baltimore-ravens,5,Lamar Jackson,COMPLETE,-10.7802465484629,11.7858399356673,3,00:24,(:24) (Shotgun) L.Jackson pass short left to W.Snead to PIT 24 for 23 yards (M.Hilton). 
-2019100607,baltimore-ravens,5,Lamar Jackson,COMPLETE,-6.81086845355142,3.30479814802053,4,13:40,(13:40) (Shotgun) L.Jackson pass short middle to M.Brown to PIT 9 for 3 yards (T.Matakevich).
-2019100607,baltimore-ravens,5,Lamar Jackson,COMPLETE,-19.9196766167138,3.3968276902824,4,12:51,(12:51) (Shotgun) L.Jackson pass short left to W.Snead to PIT 14 for 5 yards (M.Hilton).
-2019100607,baltimore-ravens,5,Lamar Jackson,COMPLETE,-2.43586235874073,4.19357821280058,4,12:26,(12:26) (Shotgun) L.Jackson pass short middle to G.Edwards to PIT 8 for 6 yards (M.Fitzpatrick).
-2019100607,baltimore-ravens,5,Lamar Jackson,INCOMPLETE,-5.41312504392067,7.60371482593705,4,07:14,(7:14) (Shotgun) L.Jackson pass incomplete short left to M.Andrews (M.Fitzpatrick). BLT-M.Andrews was injured during the play.
-2019100607,baltimore-ravens,5,Lamar Jackson,INCOMPLETE,-9.07161523073826,4.07329180178646,4,07:09,(7:09) (Shotgun) L.Jackson pass incomplete short left to N.Boyle (V.Williams).
-2019100607,baltimore-ravens,5,Lamar Jackson,COMPLETE,0.758244899207748,7.34677410058677,4,02:24,"(2:24) (Shotgun) L.Jackson pass short middle to W.Snead to PIT 44 for 14 yards (M.Fitzpatrick, V.Williams)."
-2019100607,baltimore-ravens,5,Lamar Jackson,COMPLETE,18.4479385572225,4.14885972142964,4,01:03,(1:03) (Shotgun) L.Jackson pass short right to M.Andrews to PIT 27 for 3 yards (V.Williams).
-2019100607,baltimore-ravens,5,Lamar Jackson,INCOMPLETE,-29,36,4,00:20,"(:20) (Shotgun) L.Jackson pass incomplete deep left to S.Roberts. Coverage by 22-Nelson, 39-Fitzpatrick."
-2019100607,baltimore-ravens,5,Lamar Jackson,COMPLETE,-14.6025471554862,-0.819858906525529,5,08:36,"(8:36) (Shotgun) L.Jackson pass short left to M.Andrews to BLT 21 for 1 yard (K.Kelly). Penalty on BLT, Illegal Shift, declined."
-2019090803,baltimore-ravens,1,Lamar Jackson,COMPLETE,-23.07315132,1.88137107677331,2,07:43:00 AM,(7:43) (Shotgun) L.Jackson pass short left to M.Brown to MIA 5 for 3 yards (M.Fitzpatrick).
-2019090803,baltimore-ravens,1,Lamar Jackson,COMPLETE,-10.29584722,12.2065649388053,3,03:55:00 AM,(3:55) (Shotgun) L.Jackson pass short left to M.Andrews to BLT 33 for 21 yards (X.Howard; J.Baker).
-2019090803,baltimore-ravens,1,Lamar Jackson,TOUCHDOWN,-10.12307497,1.70620996936784,3,07:58:00 AM,"(7:58) L.Jackson pass short left to P.Ricard for 1 yard, TOUCHDOWN."
-2019090803,baltimore-ravens,1,Lamar Jackson,TOUCHDOWN,-4.156181107,8.65009378236893,1,08:46:00 AM,"(8:46) (Shotgun) L.Jackson pass short middle to M.Brown for 47 yards, TOUCHDOWN. Penalty on MIA-M.Fitzpatrick, Illegal Use of Hands, declined."
-2019090803,baltimore-ravens,1,Lamar Jackson,TOUCHDOWN,-3.647405928,39.4196691022088,1,04:28:00 AM,"(4:28) (Shotgun) L.Jackson pass deep middle to M.Brown for 83 yards, TOUCHDOWN."
-2019090803,baltimore-ravens,1,Lamar Jackson,COMPLETE,-3.513331034,7.78428375465413,3,12:37:00 PM,(12:37) (Shotgun) L.Jackson pass short middle to M.Andrews to MIA 47 for 20 yards (B.McCain; M.Fitzpatrick).
-2019090803,baltimore-ravens,1,Lamar Jackson,COMPLETE,2.911419,10.0861323892004,3,03:12:00 AM,(3:12) (Shotgun) L.Jackson pass short right to H.Hurst to MIA 44 for 23 yards (W.Aikens).
-2019090803,baltimore-ravens,1,Lamar Jackson,TOUCHDOWN,7.144002515,35.0351508916324,2,01:56:00 PM,"(13:56) (Shotgun) L.Jackson pass deep middle to W.Snead for 33 yards, TOUCHDOWN."
-2019090803,baltimore-ravens,1,Lamar Jackson,COMPLETE,8.401819539,30.2277329088922,3,08:50:00 AM,(8:50) (Shotgun) L.Jackson pass deep middle to M.Andrews to MIA 1 for 39 yards (E.Rowe).
-2019090803,baltimore-ravens,1,Lamar Jackson,INCOMPLETE,10.29873969,3.49206349206349,3,12:32:00 AM,(:32) (Shotgun) L.Jackson pass incomplete short right to W.Snead (C.Lammons).
-2019090803,baltimore-ravens,1,Lamar Jackson,COMPLETE,10.62979597,4.04128793017677,3,10:26:00 AM,(10:26) (Shotgun) L.Jackson pass short middle to M.Andrews to MIA 37 for 4 yards (M.Fitzpatrick).
-2019090803,baltimore-ravens,1,Lamar Jackson,TOUCHDOWN,12.141217,14.4460774707688,2,06:56:00 AM,"(6:56) (Shotgun) L.Jackson pass short middle to M.Boykin for 5 yards, TOUCHDOWN. Penalty on MIA-M.Fitzpatrick, Defensive Holding, declined."
-2019090803,baltimore-ravens,1,Lamar Jackson,COMPLETE,12.97438749,6.34587802551488,2,03:31:00 AM,(3:31) (Shotgun) L.Jackson pass short right to M.Andrews to BLT 30 for 6 yards (R.Jones).
-2019090803,baltimore-ravens,1,Lamar Jackson,COMPLETE,13.70020228,9.67958922598958,1,01:34:00 AM,(1:34) (Shotgun) L.Jackson pass short right to M.Andrews to BLT 32 for 9 yards (E.Rowe).
-2019090803,baltimore-ravens,1,Lamar Jackson,INCOMPLETE,15.9390679,8.32124612297025,3,08:03:00 AM,(8:03) L.Jackson pass incomplete short right to H.Hurst.
-2019090803,baltimore-ravens,1,Lamar Jackson,COMPLETE,17.1183503,-1.7015834985287,1,12:50:00 PM,(12:50) (Shotgun) L.Jackson pass short right to N.Boyle to MIA 19 for 3 yards (E.Rowe).
-2019090803,baltimore-ravens,1,Lamar Jackson,COMPLETE,17.76404039,1.60751482425,3,10:56:00 AM,(10:56) (Shotgun) L.Jackson pass short right to M.Andrews to MIA 41 for 6 yards (M.Fitzpatrick).
-2019090803,baltimore-ravens,1,Lamar Jackson,COMPLETE,18.85763944,6.74794877693429,1,02:09:00 PM,(14:09) (Shotgun) L.Jackson pass short right to H.Hurst to MIA 33 for 7 yards (S.Eguavoen).
-2019090803,baltimore-ravens,1,Lamar Jackson,COMPLETE,20.20474801,5.4615613345772,1,12:19:00 AM,(:19) (Shotgun) L.Jackson pass short right to M.Brown to MIA 49 for 14 yards (B.McCain).
-2019090803,baltimore-ravens,1,Lamar Jackson,INCOMPLETE,24.05743201,39.5298353909465,2,03:38:00 AM,(3:38) (Shotgun) L.Jackson pass incomplete deep right to M.Brown.
-2020000000,baltimore-ravens,6,Lamar Jackson,COMPLETE,17.48276,1.257273,1,12:15:00 PM,(12:15) (Shotgun) L.Jackson pass short right to H.Hurst to CIN 21 for 4 yards (N.Vigil).
-2020000000,baltimore-ravens,6,Lamar Jackson,INCOMPLETE,-5.79664,12.32716,1,09:42:00 AM,(9:42) (Shotgun) L.Jackson pass incomplete short middle to M.Andrews.
-2020000000,baltimore-ravens,6,Lamar Jackson,COMPLETE,-5.14665,-4.70334,1,09:38:00 AM,(9:38) (Shotgun) L.Jackson pass short left to M.Ingram to CIN 41 for 11 yards (A.Brown).
-2020000000,baltimore-ravens,6,Lamar Jackson,COMPLETE,-2.79636,3.78003,1,08:21:00 AM,(8:21) (Shotgun) L.Jackson pass short middle to C.Moore to CIN 45 for 5 yards (N.Vigil).
-2020000000,baltimore-ravens,6,Lamar Jackson,COMPLETE,-20.7612,7.964201,1,07:39:00 AM,(7:39) (Shotgun) L.Jackson pass short left to M.Andrews pushed ob at CIN 25 for 20 yards (G.Pratt).
-2020000000,baltimore-ravens,6,Lamar Jackson,COMPLETE,-13.8699,7.512541,1,06:43:00 AM,(6:43) (Shotgun) L.Jackson pass short middle to M.Boykin to CIN 12 for 18 yards (D.Kirkpatrick; W.Jackson III).
-2020000000,baltimore-ravens,6,Lamar Jackson,COMPLETE,5.944949,0.607249,1,02:50:00 AM,(2:50) (Shotgun) L.Jackson pass short right to N.Boyle to BLT 30 for 9 yards (S.Williams).
-2020000000,baltimore-ravens,6,Lamar Jackson,COMPLETE,12.19199,19.3142,1,01:05:00 AM,(1:05) (Shotgun) L.Jackson pass deep middle to M.Andrews pushed ob at CIN 24 for 39 yards (J.Bates III). CIN-D.Kirkpatrick was injured during the play.
-2020000000,baltimore-ravens,6,Lamar Jackson,INCOMPLETE,26.54744,27.72282,1,12:32:00 AM,(:32) (Shotgun) L.Jackson pass incomplete deep right to C.Moore.
-2020000000,baltimore-ravens,6,Lamar Jackson,INCOMPLETE,NA,NA,2,03:00:00 PM,(15:00) (Shotgun) L.Jackson pass incomplete deep left. Jackson throws ball away to avoid sack.
-2020000000,baltimore-ravens,6,Lamar Jackson,COMPLETE,14.4942,10.03429,2,10:35:00 AM,(10:35) L.Jackson pass short right to M.Boykin to BLT 18 for 10 yards (J.Bates III).
-2020000000,baltimore-ravens,6,Lamar Jackson,COMPLETE,14.63321,5.382811,2,07:51:00 AM,(7:51) (Shotgun) L.Jackson pass short middle to M.Andrews to CIN 43 for 7 yards (W.Jackson III).
-2020000000,baltimore-ravens,6,Lamar Jackson,INCOMPLETE,-10.0859,13.12561,2,06:34:00 AM,(6:34) (Shotgun) L.Jackson pass incomplete short middle to W.Snead (J.Bates III).
-2020000000,baltimore-ravens,6,Lamar Jackson,COMPLETE,-2.61035,-1.81846,2,02:18:00 AM,(2:18) L.Jackson pass short left to P.Ricard to BLT 28 for 6 yards (G.Pratt).
-2020000000,baltimore-ravens,6,Lamar Jackson,COMPLETE,8.229485,7.018753,2,01:36:00 AM,(2:00) (Shotgun) L.Jackson pass short right to M.Andrews to BLT 36 for 8 yards (S.Williams).
-2020000000,baltimore-ravens,6,Lamar Jackson,COMPLETE,-17.4373,1.603028,2,12:36:00 AM,"(1:36) (Shotgun) L.Jackson pass short middle to M.Andrews to BLT 44 for 16 yards (B.Wilson). FUMBLES (B.Wilson), RECOVERED by CIN-N.Vigil at BLT 46. N.Vigil to BLT 39 for 7 yards (J.Hill)."
-2020000000,baltimore-ravens,6,Lamar Jackson,COMPLETE,-15.8308,3.517351,2,12:31:00 AM,(:36) (Shotgun) L.Jackson pass short left to W.Snead pushed ob at BLT 30 for 5 yards (W.Jackson III).
-2020000000,baltimore-ravens,6,Lamar Jackson,INCOMPLETE,-20.0215,22.50672,2,12:15:00 AM,(:31) (Shotgun) L.Jackson pass short left to W.Snead to BLT 40 for 10 yards (C.Lawson).
-2020000000,baltimore-ravens,6,Lamar Jackson,INCOMPLETE,NA,NA,2,12:15:00 AM,(:15) L.Jackson spiked the ball to stop the clock.
-2020000000,baltimore-ravens,6,Lamar Jackson,INCOMPLETE,5.316652,5.124927,3,03:00:00 PM,(:15) (Shotgun) L.Jackson pass incomplete deep left to M.Boykin.
-2020000000,baltimore-ravens,6,Lamar Jackson,COMPLETE,10.00701,3.104431,3,02:56:00 PM,(15:00) (Shotgun) L.Jackson pass incomplete short middle to N.Boyle (N.Vigil).
-2020000000,baltimore-ravens,6,Lamar Jackson,COMPLETE,-2.5751,8.579764,3,02:08:00 PM,(14:56) (Shotgun) L.Jackson pass short middle to W.Snead to BLT 43 for 3 yards (P.Brown).
-2020000000,baltimore-ravens,6,Lamar Jackson,INCOMPLETE,9.133403,7.403787,3,11:56:00 AM,(14:08) (Shotgun) L.Jackson pass short middle to M.Andrews to CIN 48 for 9 yards (T.McTyer).
-2020000000,baltimore-ravens,6,Lamar Jackson,COMPLETE,1.468041,0.75733,3,05:37:00 AM,(11:56) (Shotgun) L.Jackson pass incomplete short middle to M.Andrews (L.Reynolds).
-2020000000,baltimore-ravens,6,Lamar Jackson,COMPLETE,-16.4693,6.961641,3,03:38:00 AM,(5:37) (Shotgun) L.Jackson pass short middle to M.Ingram to BLT 27 for 11 yards (T.McRae).
-2020000000,baltimore-ravens,6,Lamar Jackson,COMPLETE,14.41729,3.337886,3,01:43:00 AM,(3:38) (Shotgun) L.Jackson pass short left to S.Roberts to BLT 41 for 7 yards (T.McRae).
-2020000000,baltimore-ravens,6,Lamar Jackson,INCOMPLETE,-20.7841,-5.70547,3,12:22:00 AM,(1:43) (Shotgun) L.Jackson pass short right to S.Roberts to CIN 35 for 16 yards (S.Hubbard).
-2020000000,baltimore-ravens,6,Lamar Jackson,INCOMPLETE,NA,NA,3,12:15:00 AM,(:22) (Shotgun) L.Jackson pass incomplete short left to M.Ingram.
-2020000000,baltimore-ravens,6,Lamar Jackson,COMPLETE,-5.90613,7.48228,4,12:36:00 PM,(:15) (Shotgun) L.Jackson pass incomplete deep right. Jackson throws ball away.
-2020000000,baltimore-ravens,6,Lamar Jackson,COMPLETE,-8.28014,5.328717,4,12:36:00 PM,(12:36) (Shotgun) L.Jackson pass short middle to C.Moore to BLT 35 for 13 yards (J.Bates III).
-2020000000,baltimore-ravens,6,Lamar Jackson,INCOMPLETE,-12.1249,20.27434,4,08:40:00 AM,(8:40) (Shotgun) L.Jackson pass incomplete short left to W.Snead.
-2020000000,baltimore-ravens,6,Lamar Jackson,COMPLETE,-17.757,11.17068,4,05:30:00 AM,"(5:30) L.Jackson pass short left to N.Boyle to CIN 12 for 9 yards (N.Vigil, P.Brown)."
-2020000000,baltimore-ravens,6,Lamar Jackson,INCOMPLETE,-14.0204,0.36067,4,03:52:00 AM,(3:52) (Shotgun) L.Jackson pass incomplete short left to N.Boyle.
+game_id,team,week,name,pass_type,x,y,q,time,detail,
+2019090803,baltimore-ravens,1,Lamar Jackson,COMPLETE,17.1183503,-1.7015834985287,1,12:50:00 PM,(12:50) (Shotgun) L.Jackson pass short right to N.Boyle to MIA 19 for 3 yards (E.Rowe).,
+2019090803,baltimore-ravens,1,Lamar Jackson,COMPLETE,20.20474801,5.4615613345772,1,12:19:00 AM,(:19) (Shotgun) L.Jackson pass short right to M.Brown to MIA 49 for 14 yards (B.McCain).,
+2019090803,baltimore-ravens,1,Lamar Jackson,TOUCHDOWN,-4.156181107,8.65009378236893,1,08:46:00 AM,"(8:46) (Shotgun) L.Jackson pass short middle to M.Brown for 47 yards, TOUCHDOWN. Penalty on MIA-M.Fitzpatrick, Illegal Use of Hands, declined.",
+2019090803,baltimore-ravens,1,Lamar Jackson,TOUCHDOWN,-3.647405928,39.4196691022088,1,04:28:00 AM,"(4:28) (Shotgun) L.Jackson pass deep middle to M.Brown for 83 yards, TOUCHDOWN.",
+2019090803,baltimore-ravens,1,Lamar Jackson,COMPLETE,18.85763944,6.74794877693429,1,02:09:00 PM,(14:09) (Shotgun) L.Jackson pass short right to H.Hurst to MIA 33 for 7 yards (S.Eguavoen).,
+2019090803,baltimore-ravens,1,Lamar Jackson,COMPLETE,13.70020228,9.67958922598958,1,01:34:00 AM,(1:34) (Shotgun) L.Jackson pass short right to M.Andrews to BLT 32 for 9 yards (E.Rowe).,
+2019090803,baltimore-ravens,1,Lamar Jackson,COMPLETE,-23.07315132,1.88137107677331,2,07:43:00 AM,(7:43) (Shotgun) L.Jackson pass short left to M.Brown to MIA 5 for 3 yards (M.Fitzpatrick).,
+2019090803,baltimore-ravens,1,Lamar Jackson,TOUCHDOWN,12.141217,14.4460774707688,2,06:56:00 AM,"(6:56) (Shotgun) L.Jackson pass short middle to M.Boykin for 5 yards, TOUCHDOWN. Penalty on MIA-M.Fitzpatrick, Defensive Holding, declined.", S.Nelson).
+2019090803,baltimore-ravens,1,Lamar Jackson,INCOMPLETE,24.05743201,39.5298353909465,2,03:38:00 AM,(3:38) (Shotgun) L.Jackson pass incomplete deep right to M.Brown.,
+2019090803,baltimore-ravens,1,Lamar Jackson,COMPLETE,12.97438749,6.34587802551488,2,03:31:00 AM,(3:31) (Shotgun) L.Jackson pass short right to M.Andrews to BLT 30 for 6 yards (R.Jones).,
+2019090803,baltimore-ravens,1,Lamar Jackson,TOUCHDOWN,7.144002515,35.0351508916324,2,01:56:00 PM,"(13:56) (Shotgun) L.Jackson pass deep middle to W.Snead for 33 yards, TOUCHDOWN.", J.Haden). 
+2019090803,baltimore-ravens,1,Lamar Jackson,COMPLETE,-3.513331034,7.78428375465413,3,12:37:00 PM,(12:37) (Shotgun) L.Jackson pass short middle to M.Andrews to MIA 47 for 20 yards (B.McCain,
+2019090803,baltimore-ravens,1,Lamar Jackson,INCOMPLETE,10.29873969,3.49206349206349,3,12:32:00 AM,(:32) (Shotgun) L.Jackson pass incomplete short right to W.Snead (C.Lammons).,
+2019090803,baltimore-ravens,1,Lamar Jackson,COMPLETE,17.76404039,1.60751482425,3,10:56:00 AM,(10:56) (Shotgun) L.Jackson pass short right to M.Andrews to MIA 41 for 6 yards (M.Fitzpatrick).,
+2019090803,baltimore-ravens,1,Lamar Jackson,COMPLETE,10.62979597,4.04128793017677,3,10:26:00 AM,(10:26) (Shotgun) L.Jackson pass short middle to M.Andrews to MIA 37 for 4 yards (M.Fitzpatrick).,
+2019090803,baltimore-ravens,1,Lamar Jackson,COMPLETE,8.401819539,30.2277329088922,3,08:50:00 AM,(8:50) (Shotgun) L.Jackson pass deep middle to M.Andrews to MIA 1 for 39 yards (E.Rowe).,
+2019090803,baltimore-ravens,1,Lamar Jackson,INCOMPLETE,15.9390679,8.32124612297025,3,08:03:00 AM,(8:03) L.Jackson pass incomplete short right to H.Hurst.,
+2019090803,baltimore-ravens,1,Lamar Jackson,TOUCHDOWN,-10.12307497,1.70620996936784,3,07:58:00 AM,"(7:58) L.Jackson pass short left to P.Ricard for 1 yard, TOUCHDOWN.",
+2019090803,baltimore-ravens,1,Lamar Jackson,COMPLETE,-10.29584722,12.2065649388053,3,03:55:00 AM,(3:55) (Shotgun) L.Jackson pass short left to M.Andrews to BLT 33 for 21 yards (X.Howard,
+2019090803,baltimore-ravens,1,Lamar Jackson,COMPLETE,2.911419,10.0861323892004,3,03:12:00 AM,(3:12) (Shotgun) L.Jackson pass short right to H.Hurst to MIA 44 for 23 yards (W.Aikens).,
+2019091500,baltimore-ravens,2,Lamar Jackson,COMPLETE,0.7767814996,8.685931872,1,12:02:00 PM,"(12:02) (Shotgun) L.Jackson pass short middle to N.Boyle to BLT 20 for 14 yards (B.Murphy, H.Reddick).",
+2019091500,baltimore-ravens,2,Lamar Jackson,COMPLETE,-4.466558956,16.81669765,1,10:42:00 AM,(10:42) (Shotgun) L.Jackson pass deep middle to M.Brown to BLT 39 for 18 yards (B.Murphy; D.Swearinger).,
+2019091500,baltimore-ravens,2,Lamar Jackson,COMPLETE,-23.42210337,6.60569077,1,09:23:00 AM,(9:23) (Shotgun) L.Jackson pass short left to M.Brown ran ob at ARZ 36 for 6 yards.,
+2019091500,baltimore-ravens,2,Lamar Jackson,COMPLETE,12.21360672,1.221217423,1,08:55:00 AM,(8:55) (Shotgun) L.Jackson pass short right to M.Brown to ARZ 27 for 9 yards (B.Murphy; D.Swearinger).,
+2019091500,baltimore-ravens,2,Lamar Jackson,TOUCHDOWN,25.03662775,18.39584558,1,08:12:00 AM,"(8:12) (Shotgun) L.Jackson pass deep right to M.Andrews for 27 yards, TOUCHDOWN.",
+2019091500,baltimore-ravens,2,Lamar Jackson,COMPLETE,20.61399801,5.270970836,1,05:56:00 AM,(5:56) (Shotgun) L.Jackson pass short right to M.Brown to ARZ 42 for 6 yards (T.Brock).,
+2019091500,baltimore-ravens,2,Lamar Jackson,INCOMPLETE,23.63352798,15.50355774,1,04:39:00 AM,(4:39) (Shotgun) L.Jackson pass incomplete deep right to M.Brown.,
+2019091500,baltimore-ravens,2,Lamar Jackson,INCOMPLETE,-14.50964108,28.62207446,1,02:18:00 AM,(2:18) (Shotgun) L.Jackson pass incomplete deep left to M.Brown.,
+2019091500,baltimore-ravens,2,Lamar Jackson,COMPLETE,0.8081198872,21.39172016,1,01:53:00 AM,"(1:53) (Shotgun) L.Jackson pass deep middle to M.Andrews to BLT 44 for 26 yards (B.Baker; D.Swearinger). FUMBLES (B.Baker), and recovers at BLT 46. M.Andrews to BLT 46 for no gain (B.Baker). Arizona challenged the pass completion ruling, and the play was Upheld. The ruling on the field stands. (Timeout #1.)",
+2019091500,baltimore-ravens,2,Lamar Jackson,INCOMPLETE,-10.51283011,16.50936855,2,03:00:00 PM,(15:00) (Shotgun) L.Jackson pass incomplete deep middle to J.Hill (H.Reddick)., J.Baker).
+2019091500,baltimore-ravens,2,Lamar Jackson,COMPLETE,-2.897715738,5.554367825,2,02:54:00 PM,"(14:54) (Shotgun) L.Jackson pass short middle to M.Andrews to ARZ 15 for 8 yards (J.Hicks, H.Reddick).",
+2019091500,baltimore-ravens,2,Lamar Jackson,INCOMPLETE,-10.11451527,21.73878811,2,07:50:00 AM,(7:50) (Shotgun) L.Jackson pass incomplete deep left to M.Brown.,
+2019091500,baltimore-ravens,2,Lamar Jackson,COMPLETE,7.513914349,12.4396981,2,06:18:00 AM,(6:18) (Shotgun) L.Jackson pass short middle to M.Andrews to ARZ 32 for 24 yards (B.Baker).,
+2019091500,baltimore-ravens,2,Lamar Jackson,COMPLETE,21.9628112,15.50738734,2,05:43:00 AM,(5:43) (Shotgun) L.Jackson pass deep right to M.Ingram to ARZ 12 for 20 yards (D.Swearinger)., M.Fitzpatrick).
+2019091500,baltimore-ravens,2,Lamar Jackson,COMPLETE,13.4778216,-1.381120349,2,04:29:00 AM,(4:29) (Shotgun) L.Jackson pass short right to J.Hill to ARZ 01 for 10 yards (J.Hicks).,
+2019091500,baltimore-ravens,2,Lamar Jackson,TOUCHDOWN,7.383338626,1.869593516,2,03:53:00 AM,"(3:53) L.Jackson pass short middle to H.Hurst for 1 yard, TOUCHDOWN.",
+2019091500,baltimore-ravens,2,Lamar Jackson,INCOMPLETE,-19.01460372,23.27914694,3,03:00:00 PM,(15:00) (Shotgun) L.Jackson pass incomplete deep left to M.Boykin.,
+2019091500,baltimore-ravens,2,Lamar Jackson,COMPLETE,-5.410343072,-5.516198239,3,01:41:00 PM,(13:41) (Shotgun) L.Jackson pass short left to M.Andrews to BLT 29 for -2 yards (H.Reddick).,
+2019091500,baltimore-ravens,2,Lamar Jackson,COMPLETE,15.28241602,-1.466247739,3,08:16:00 AM,(8:16) (Shotgun) L.Jackson pass short right to P.Ricard to BLT 24 for 3 yards (B.Baker).,
+2019091500,baltimore-ravens,2,Lamar Jackson,COMPLETE,16.38243137,-0.7443019943,3,07:28:00 AM,(7:28) (Shotgun) L.Jackson pass short right to M.Ingram to BLT 34 for 10 yards (B.Murphy).,
+2019091500,baltimore-ravens,2,Lamar Jackson,COMPLETE,-16.46205765,-3.607915801,3,05:41:00 AM,(5:41) (Shotgun) L.Jackson pass short left to M.Brown to ARZ 46 for 3 yards (B.Murphy).,
+2019091500,baltimore-ravens,2,Lamar Jackson,INCOMPLETE,,,3,04:56:00 AM,(4:56) (Shotgun) L.Jackson pass incomplete deep right.,
+2019091500,baltimore-ravens,2,Lamar Jackson,COMPLETE,-11.12896992,9.046837239,3,04:48:00 AM,(4:48) (Shotgun) L.Jackson pass short middle to M.Andrews to ARZ 37 for 9 yards (H.Reddick).,
+2019091500,baltimore-ravens,2,Lamar Jackson,COMPLETE,19.66515309,-1.358560613,3,03:34:00 AM,(3:34) (Shotgun) L.Jackson pass short right to M.Brown to ARZ 25 for 3 yards (T.Brock).,
+2019091500,baltimore-ravens,2,Lamar Jackson,INCOMPLETE,0.3955377665,3.29159318,3,02:09:00 AM,(2:09) (Shotgun) L.Jackson pass incomplete short middle to M.Boykin.,
+2019091500,baltimore-ravens,2,Lamar Jackson,COMPLETE,-4.199324435,7.317306955,3,02:07:00 AM,(2:07) (Shotgun) L.Jackson pass short middle to M.Andrews to ARZ 14 for 8 yards (J.Hicks).,
+2019091500,baltimore-ravens,2,Lamar Jackson,INCOMPLETE,-10.8759267,-2.823444192,3,01:05:00 AM,(1:05) (Shotgun) L.Jackson pass incomplete short middle to N.Boyle (C.Jones).,
+2019091500,baltimore-ravens,2,Lamar Jackson,INCOMPLETE,0.09983775351,15.98793279,3,01:01:00 AM,(1:01) (Shotgun) L.Jackson pass incomplete deep middle to N.Boyle (J.Hicks).,
+2019091500,baltimore-ravens,2,Lamar Jackson,COMPLETE,-14.67058522,5.087679516,4,12:16:00 PM,(12:16) (Shotgun) L.Jackson pass short left to M.Andrews pushed ob at BLT 37 for 10 yards (J.Hicks).,
+2019091500,baltimore-ravens,2,Lamar Jackson,COMPLETE,-24.07340481,12.14313798,4,11:43:00 AM,(11:43) (Shotgun) L.Jackson pass short left to M.Boykin ran ob at BLT 48 for 11 yards (B.Murphy).,
+2019091500,baltimore-ravens,2,Lamar Jackson,INCOMPLETE,-10.74758039,13.60270103,4,09:55:00 AM,(9:55) (Shotgun) L.Jackson pass incomplete short middle to M.Andrews.,
+2019091500,baltimore-ravens,2,Lamar Jackson,INCOMPLETE,,,4,09:50:00 AM,(9:50) (Shotgun) L.Jackson pass incomplete short right.,
+2019091500,baltimore-ravens,2,Lamar Jackson,COMPLETE,7.300891248,4.705181372,4,09:46:00 AM,(9:46) (Shotgun) L.Jackson pass short middle to W.Snead to ARZ 33 for 5 yards (B.Murphy).,
+2019091500,baltimore-ravens,2,Lamar Jackson,INCOMPLETE,-10.40763608,6.55766878,4,07:30:00 AM,(7:30) (Shotgun) L.Jackson pass incomplete short middle to M.Brown (B.Murphy)., W.Jackson III).
+2019091500,baltimore-ravens,2,Lamar Jackson,COMPLETE,-13.17071594,-0.3669136812,4,04:48:00 AM,(4:48) (Shotgun) L.Jackson pass short left to M.Brown to ARZ 45 for no gain (B.Baker).,
+2019091500,baltimore-ravens,2,Lamar Jackson,INCOMPLETE,1.153367596,6.942666553,4,04:00:00 AM,"(4:00) (Shotgun) L.Jackson pass incomplete short middle to M.Brown (B.Murphy). Baltimore challenged the play for possible defensive pass interference, and the play was Upheld. The ruling on the field stands. (Timeout #2.)",
+2019091500,baltimore-ravens,2,Lamar Jackson,COMPLETE,23.58049321,33.56701399,4,03:05:00 AM,(3:05) (Shotgun) L.Jackson pass deep right to M.Brown to ARZ 15 for 41 yards (T.Brock).,
+2019092204,baltimore-ravens,3,Lamar Jackson,COMPLETE,13.45443651,2.604594634,1,10:54:00 AM,(10:54) (Shotgun) L.Jackson pass short right to H.Hurst to BLT 19 for 3 yards (D.Wilson).,
+2019092204,baltimore-ravens,3,Lamar Jackson,COMPLETE,3.285361126,9.072164948,1,10:14:00 AM,(10:14) (Shotgun) L.Jackson pass short right to N.Boyle to BLT 42 for 23 yards (D.Lee).,
+2019092204,baltimore-ravens,3,Lamar Jackson,INCOMPLETE,1.277091264,39.10464433,1,09:36:00 AM,(9:36) (Shotgun) L.Jackson pass incomplete deep middle to M.Brown.,
+2019092204,baltimore-ravens,3,Lamar Jackson,INCOMPLETE,21.39000758,32.52118852,1,07:19:00 AM,(7:19) (Shotgun) L.Jackson pass incomplete deep right to M.Brown.,
+2019092204,baltimore-ravens,3,Lamar Jackson,COMPLETE,-0.8498534697,4.770211422,1,06:35:00 AM,(6:35) (Shotgun) L.Jackson pass short middle to M.Andrews to KC 16 for 5 yards (T.Mathieu).,
+2019092204,baltimore-ravens,3,Lamar Jackson,INCOMPLETE,26.80627984,18.41569332,1,06:11:00 AM,(6:11) (Shotgun) L.Jackson pass incomplete deep right to M.Andrews.,
+2019092204,baltimore-ravens,3,Lamar Jackson,INCOMPLETE,12.90896667,15.05126267,1,06:06:00 AM,(6:06) (Shotgun) L.Jackson pass incomplete deep right to N.Boyle.,
+2019092204,baltimore-ravens,3,Lamar Jackson,INCOMPLETE,23.57656664,28.47001764,2,01:42:00 PM,(13:42) (Shotgun) L.Jackson pass incomplete deep right to M.Brown.,
+2019092204,baltimore-ravens,3,Lamar Jackson,COMPLETE,5.504665124,5.084883441,2,01:34:00 PM,"(13:34) (Shotgun) L.Jackson pass short middle to M.Andrews to BLT 35 for 6 yards (T.Mathieu; B.Niemann). Kansas City challenged the first down ruling, and the play was REVERSED. (Shotgun) L.Jackson pass short middle to M.Andrews to BLT 34 for 5 yards (T.Mathieu; B.Niemann).",
+2019092204,baltimore-ravens,3,Lamar Jackson,COMPLETE,9.181182991,-5.002184977,2,11:59:00 AM,(11:59) (Shotgun) L.Jackson pass short right to M.Ingram to BLT 44 for 6 yards (X.Williams).,
+2019092204,baltimore-ravens,3,Lamar Jackson,INCOMPLETE,16.61662773,2.037825669,2,10:38:00 AM,(10:38) (Shotgun) L.Jackson pass incomplete short right to M.Brown.,
+2019092204,baltimore-ravens,3,Lamar Jackson,INCOMPLETE,16.03123927,-0.9548611111,2,06:07:00 AM,(6:07) (Shotgun) L.Jackson pass incomplete short right to J.Hill (T.Mathieu).,
+2019092204,baltimore-ravens,3,Lamar Jackson,COMPLETE,-6.811644917,1.56357306,2,05:18:00 AM,(5:18) (Shotgun) L.Jackson pass short left to N.Boyle to BLT 43 for 9 yards (B.Niemann).,
+2019092204,baltimore-ravens,3,Lamar Jackson,COMPLETE,-9.854743203,5.186719304,2,02:17:00 AM,(2:17) (Shotgun) L.Jackson pass short left to H.Hurst to BLT 36 for 11 yards (T.Mathieu).,
+2019092204,baltimore-ravens,3,Lamar Jackson,INCOMPLETE,-1.005372068,9.640945201,2,02:00:00 AM,(2:00) (Shotgun) L.Jackson pass incomplete short middle to M.Andrews (T.Mathieu).,
+2019092204,baltimore-ravens,3,Lamar Jackson,COMPLETE,-14.37784937,4.858647163,2,01:55:00 AM,(1:55) (Shotgun) L.Jackson pass short left to W.Snead pushed ob at BLT 49 for 13 yards (A.Hitchens).,
+2019092204,baltimore-ravens,3,Lamar Jackson,INCOMPLETE,2.638704262,-3.647854203,2,01:45:00 AM,(1:45) (Shotgun) L.Jackson pass incomplete short right to J.Hill.,
+2019092204,baltimore-ravens,3,Lamar Jackson,INCOMPLETE,-17.99659758,19.41385931,2,01:42:00 AM,(1:42) (Shotgun) L.Jackson pass incomplete deep left to W.Snead (B.Niemann) [E.Ogbah].,
+2019092204,baltimore-ravens,3,Lamar Jackson,INCOMPLETE,2.792196631,29.00352734,2,01:34:00 AM,(1:34) (Shotgun) L.Jackson pass incomplete deep middle to H.Hurst.,
+2019092204,baltimore-ravens,3,Lamar Jackson,INCOMPLETE,26.05372487,27.95941113,3,10:49:00 AM,(10:49) (Shotgun) L.Jackson pass incomplete deep right to H.Hurst.,
+2019092204,baltimore-ravens,3,Lamar Jackson,INCOMPLETE,-8.641561305,4.291255014,3,06:33:00 AM,(6:33) (Shotgun) L.Jackson pass incomplete short left to M.Brown (E.Ogbah).,
+2019092204,baltimore-ravens,3,Lamar Jackson,COMPLETE,-4.093422178,3.307958104,3,02:07:00 AM,(2:07) (Shotgun) L.Jackson pass short middle to N.Boyle to BLT 40 for 15 yards (A.Hitchens).,
+2019092204,baltimore-ravens,3,Lamar Jackson,COMPLETE,7.143325581,3.91159612,3,12:44:00 AM,(:44) (Shotgun) L.Jackson pass short right to N.Boyle to BLT 39 for 11 yards (K.Fuller).,
+2019092204,baltimore-ravens,3,Lamar Jackson,COMPLETE,10.41694238,13.32766684,3,12:05:00 AM,(:05) (Shotgun) L.Jackson pass short right to M.Brown to KC 43 for 18 yards (B.Breeland).,
+2019092204,baltimore-ravens,3,Lamar Jackson,INCOMPLETE,19.5411603,29.73104056,4,02:31:00 PM,(14:31) (Shotgun) L.Jackson pass incomplete deep right to M.Brown.,
+2019092204,baltimore-ravens,3,Lamar Jackson,COMPLETE,-10.99690473,-6.250814738,4,01:54:00 PM,(13:54) (Shotgun) L.Jackson pass short left to G.Edwards to KC 27 for 5 yards (K.Fuller; A.Okafor).,
+2019092204,baltimore-ravens,3,Lamar Jackson,INCOMPLETE,-15.37423184,3.387600054,4,01:28:00 PM,"(13:28) (No Huddle, Shotgun) L.Jackson pass incomplete short left to W.Snead (D.Nnadi).",
+2019092204,baltimore-ravens,3,Lamar Jackson,INCOMPLETE,-6.507785769,6.264012196,4,01:25:00 PM,(13:25) (Shotgun) L.Jackson pass incomplete short left to J.Hill.,
+2019092204,baltimore-ravens,3,Lamar Jackson,COMPLETE,15.92425271,24.10506557,4,01:21:00 PM,"(13:21) (Shotgun) L.Jackson pass deep right to S.Roberts to KC 2 for 25 yards (K.Fuller) [J.Thornhill]. Kansas City challenged the play for possible offensive pass interference, and the play was Upheld. The ruling on the field stands. (Timeout #1.)",
+2019092204,baltimore-ravens,3,Lamar Jackson,COMPLETE,25.02300258,26.73044865,4,09:36:00 AM,(9:36) (Shotgun) L.Jackson pass deep right to M.Brown pushed ob at KC 32 for 31 yards (B.Breeland).,
+2019092204,baltimore-ravens,3,Lamar Jackson,INCOMPLETE,26.65865438,37.43939258,4,09:27:00 AM,(9:27) (Shotgun) L.Jackson pass incomplete deep right to M.Brown.,
+2019092204,baltimore-ravens,3,Lamar Jackson,COMPLETE,14.23262303,3.37515465,4,08:55:00 AM,(8:55) (Shotgun) L.Jackson pass short right to M.Ingram to KC 39 for 3 yards (B.Breeland).,
+2019092204,baltimore-ravens,3,Lamar Jackson,COMPLETE,-21.12583947,20.27656512,4,08:13:00 AM,(8:13) (Shotgun) L.Jackson pass deep left to W.Snead to KC 16 for 23 yards (C.Ward).,
+2019092204,baltimore-ravens,3,Lamar Jackson,INCOMPLETE,16.15056992,27.58456564,4,07:39:00 AM,(7:39) (Shotgun) L.Jackson pass incomplete deep right to M.Andrews.,
+2019092204,baltimore-ravens,3,Lamar Jackson,INCOMPLETE,-0.5959230988,16.87368775,4,07:34:00 AM,(7:34) (Shotgun) L.Jackson pass incomplete deep middle to H.Hurst (T.Mathieu).,
+2019092204,baltimore-ravens,3,Lamar Jackson,COMPLETE,-18.8774188,0.3718619709,4,04:30:00 AM,(4:30) (Shotgun) L.Jackson pass short left to M.Ingram to BLT 40 for 10 yards (D.Sorensen).,
+2019092204,baltimore-ravens,3,Lamar Jackson,COMPLETE,8.629459564,4.874184946,4,04:00:00 AM,"(4:00) (No Huddle, Shotgun) L.Jackson pass short right to M.Andrews to BLT 45 for 5 yards (A.Hitchens).",
+2019092204,baltimore-ravens,3,Lamar Jackson,COMPLETE,-12.08065109,4.40539496,4,03:41:00 AM,"(3:41) (No Huddle, Shotgun) L.Jackson pass short left to W.Snead to KC 44 for 11 yards (K.Fuller).",
+2019092204,baltimore-ravens,3,Lamar Jackson,COMPLETE,-12.25045693,-0.7380035868,4,03:17:00 AM,"(3:17) (No Huddle, Shotgun) L.Jackson pass short left to M.Ingram to KC 31 for 13 yards (D.Sorensen).",
+2019092204,baltimore-ravens,3,Lamar Jackson,COMPLETE,-17.08593225,-3.562622309,4,02:47:00 AM,"(2:47) (No Huddle, Shotgun) L.Jackson pass short left to G.Edwards pushed ob at KC 21 for 10 yards (C.Ward).",
+2019092204,baltimore-ravens,3,Lamar Jackson,INCOMPLETE,-25.27200912,23.601068,4,02:41:00 AM,(2:41) (Shotgun) L.Jackson pass incomplete deep left to M.Boykin.,
+2019092204,baltimore-ravens,3,Lamar Jackson,COMPLETE,-22.68278974,7.737149996,4,02:36:00 AM,(2:36) (Shotgun) L.Jackson pass short left to S.Roberts to KC 9 for 12 yards (C.Ward).,
+2019092204,baltimore-ravens,3,Lamar Jackson,INCOMPLETE,-13.16881673,2.658691818,4,02:14:00 AM,"(2:14) (No Huddle, Shotgun) L.Jackson pass incomplete short left to M.Andrews.",
+2020000000,baltimore-ravens,4,Lamar Jackson,COMPLETE,-19.4388,3.801122,1,02:45:00 AM,(2:45) (Shotgun) L.Jackson pass short left to M.Brown to BLT 25 for 4 yards (T.Carrie).,
+2020000000,baltimore-ravens,4,Lamar Jackson,COMPLETE,-19.4906,5.257917,1,02:19:00 AM,(2:19) (Shotgun) L.Jackson pass short left to M.Andrews to BLT 32 for 7 yards (T.Carrie).,
+2020000000,baltimore-ravens,4,Lamar Jackson,COMPLETE,-3.16364,8.64864,1,01:32:00 AM,(1:32) (Shotgun) L.Jackson pass short middle to W.Snead to CLV 49 for 11 yards (E.Murray).,
+2020000000,baltimore-ravens,4,Lamar Jackson,INCOMPLETE,14.14554,8.984788,1,12:22:00 AM,(:22) (Shotgun) L.Jackson pass incomplete short right to M.Andrews.,
+2020000000,baltimore-ravens,4,Lamar Jackson,COMPLETE,1.887473,-4.16513,2,09:45:00 AM,(9:45) (Shotgun) L.Jackson pass short middle to M.Brown pushed ob at 50 for 3 yards (J.Whitehead).,
+2020000000,baltimore-ravens,4,Lamar Jackson,COMPLETE,13.0358,-3.8462,2,09:17:00 AM,(9:17) (Shotgun) L.Jackson pass short right to M.Ingram to 50 for no gain (T.Mitchell; J.Whitehead) [D.Lawrence].,
+2020000000,baltimore-ravens,4,Lamar Jackson,INCOMPLETE,-26.6863,26.16809,2,08:32:00 AM,"(8:32) (Shotgun) L.Jackson pass deep left to C.Moore ran ob at CLV 24 for 26 yards. Cleveland challenged the pass completion ruling, and the play was REVERSED. (Shotgun) L.Jackson pass incomplete deep left to C.Moore.",
+2020000000,baltimore-ravens,4,Lamar Jackson,TOUCHDOWN,-1.18245,12.45988,2,02:00:00 AM,"(2:00) (Shotgun) L.Jackson pass short middle to M.Boykin for 9 yards, TOUCHDOWN.",
+2020000000,baltimore-ravens,4,Lamar Jackson,COMPLETE,-24.9823,17.68234,3,02:52:00 PM,(14:52) (Shotgun) L.Jackson pass deep left to M.Boykin to BLT 33 for 18 yards (T.Carrie).,
+2020000000,baltimore-ravens,4,Lamar Jackson,INCOMPLETE,20.68745,9.598684,3,11:23:00 AM,(11:23) (Shotgun) L.Jackson pass incomplete short right to M.Brown (M.Wilson).,
+2020000000,baltimore-ravens,4,Lamar Jackson,COMPLETE,-0.31042,5.027477,3,09:41:00 AM,(9:41) (Shotgun) L.Jackson pass short middle to N.Boyle to BLT 34 for 9 yards (M.Wilson; J.Schobert).,
+2020000000,baltimore-ravens,4,Lamar Jackson,COMPLETE,-18.8432,4.543255,3,07:35:00 AM,(7:35) (Shotgun) L.Jackson pass short left to S.Roberts to CLV 35 for 10 yards (S.Richardson).,
+2020000000,baltimore-ravens,4,Lamar Jackson,COMPLETE,-5.24083,13.54017,3,12:47:00 AM,(:47) (Shotgun) L.Jackson pass short middle to S.Roberts to BLT 40 for 15 yards (T.Carrie).,
+2020000000,baltimore-ravens,4,Lamar Jackson,COMPLETE,21.46125,3.005801,3,12:09:00 AM,(:09) (Shotgun) L.Jackson pass short right to M.Andrews pushed ob at BLT 45 for 5 yards (M.Wilson).,
+2020000000,baltimore-ravens,4,Lamar Jackson,INCOMPLETE,-2.49114,10.06487,4,03:00:00 PM,(15:00) (Shotgun) L.Jackson pass incomplete short middle to M.Brown.,
+2020000000,baltimore-ravens,4,Lamar Jackson,COMPLETE,2.232448,7.070446,4,01:43:00 PM,(13:43) (Shotgun) L.Jackson pass short middle to M.Andrews to CLV 40 for 11 yards (D.Randall).,
+2020000000,baltimore-ravens,4,Lamar Jackson,COMPLETE,21.76377,1.05813,4,12:36:00 PM,(12:36) (Shotgun) L.Jackson pass short right to G.Edwards to CLV 30 for 8 yards (M.Wilson).,
+2020000000,baltimore-ravens,4,Lamar Jackson,COMPLETE,8.702685,4.108119,4,11:38:00 AM,"(11:38) (No Huddle, Shotgun) L.Jackson pass short middle to J.Hill to CLV 11 for 5 yards (J.Whitehead) [O.Vernon].",
+2020000000,baltimore-ravens,4,Lamar Jackson,COMPLETE,23.3256,5.363313,4,11:04:00 AM,(11:04) (Shotgun) L.Jackson pass short right to M.Brown pushed ob at CLV 6 for 5 yards (T.Mitchell).,
+2020000000,baltimore-ravens,4,Lamar Jackson,INCOMPLETE,4.961674,16.08596,4,10:00:00 AM,(10:00) (Shotgun) L.Jackson pass incomplete short middle to M.Brown.,
+2020000000,baltimore-ravens,4,Lamar Jackson,TOUCHDOWN,7.167274,14.3924,4,09:55:00 AM,"(9:55) (Shotgun) L.Jackson pass short middle to M.Andrews for 8 yards, TOUCHDOWN.",
+2020000000,baltimore-ravens,4,Lamar Jackson,INCOMPLETE,,,4,09:30:00 AM,(9:30) (Shotgun) L.Jackson pass incomplete short right. Jackson throws ball away to avoid sack.,
+2020000000,baltimore-ravens,4,Lamar Jackson,COMPLETE,-18.1762,2.589415,4,09:22:00 AM,(9:22) (Shotgun) L.Jackson pass short left to S.Roberts pushed ob at BLT 28 for 4 yards (T.Carrie).,
+2020000000,baltimore-ravens,4,Lamar Jackson,INCOMPLETE,-18.117,9.557847,4,08:19:00 AM,(8:19) (Shotgun) L.Jackson pass incomplete short left to M.Andrews.,
+2020000000,baltimore-ravens,4,Lamar Jackson,COMPLETE,24.32976,10.20316,4,06:56:00 AM,(6:56) (Shotgun) L.Jackson pass short right to M.Brown to BLT 35 for 10 yards (T.Mitchell).,
+2020000000,baltimore-ravens,4,Lamar Jackson,COMPLETE,-12.6188,-5.37597,4,06:41:00 AM,"(6:41) (No Huddle, Shotgun) L.Jackson pass short left to J.Hill to BLT 39 for 4 yards (J.Schobert). CLV-S.Richardson was injured during the play.",
+2020000000,baltimore-ravens,4,Lamar Jackson,COMPLETE,-20.2307,7.913095,4,06:26:00 AM,"(6:26) (No Huddle, Shotgun) L.Jackson pass short left to S.Roberts to BLT 46 for 7 yards (E.Murray).",
+2020000000,baltimore-ravens,4,Lamar Jackson,INTERCEPTION,0.819939,53.89469,4,06:02:00 AM,"(6:02) (No Huddle, Shotgun) L.Jackson pass deep middle intended for M.Andrews INTERCEPTED by J.Whitehead at CLV 00. Touchback.",
+2020000000,baltimore-ravens,4,Lamar Jackson,INCOMPLETE,25.25063,10.16349,4,05:30:00 AM,(5:30) (Shotgun) L.Jackson pass incomplete short right to S.Roberts.,
+2020000000,baltimore-ravens,4,Lamar Jackson,INTERCEPTION,-5.9701,-1.99588,4,05:27:00 AM,(5:27) (Shotgun) L.Jackson pass short left intended for M.Andrews INTERCEPTED by D.Lawrence at BLT 39. D.Lawrence to BLT 39 for no gain (B.Bozeman).,
+2020000000,baltimore-ravens,4,Lamar Jackson,COMPLETE,-17.5954,5.749767,4,02:09:00 AM,(2:09) (Shotgun) L.Jackson pass short left to M.Boykin to BLT 26 for 5 yards (T.Carrie).,
+2020000000,baltimore-ravens,4,Lamar Jackson,COMPLETE,4.983884,6.998861,4,01:37:00 AM,"(1:37) (No Huddle, Shotgun) L.Jackson pass short middle to H.Hurst to BLT 26 for 10 yards (M.Wilson; J.Schobert).",
+2020000000,baltimore-ravens,4,Lamar Jackson,COMPLETE,6.57074,10.12156,4,01:09:00 AM,"(1:09) (No Huddle, Shotgun) L.Jackson pass short middle to H.Hurst to CLV 45 for 29 yards (J.Whitehead).",
+2020000000,baltimore-ravens,4,Lamar Jackson,TOUCHDOWN,-14.831,6.104497,4,12:40:00 AM,"(:40) (No Huddle, Shotgun) L.Jackson pass short left to W.Snead for 50 yards, TOUCHDOWN.",
+2019100607,baltimore-ravens,5,Lamar Jackson,COMPLETE,-4.20188560832247,8.09952063215775,1,10:21,"(10:21) (Shotgun) L.Jackson pass short middle to M.Andrews to PIT 25 for 10 yards (K.Kelly, M.Fitzpatrick). ",
+2019100607,baltimore-ravens,5,Lamar Jackson,INCOMPLETE,-2.08031181074829,12.4003375296479,1,07:29,(7:29) (Shotgun) L.Jackson pass incomplete short middle to M.Brown (C.Sutton). ,
+2019100607,baltimore-ravens,5,Lamar Jackson,COMPLETE,7.86206411160909,-1.67386737662742,1,02:41,(2:41) (Shotgun) L.Jackson pass short right to M.Ingram pushed ob at BLT 29 for 4 yards (Te.Edmunds). ,
+2019100607,baltimore-ravens,5,Lamar Jackson,INCOMPLETE,-4.6475398682614,5.23001175778954,1,00:56,"(:56) (Shotgun) L.Jackson pass incomplete short middle to M.Brown. Penalty on BLT-O.Brown, Ineligible Downfield Pass, declined. Coverage by 48-Dupree.",
+2019100607,baltimore-ravens,5,Lamar Jackson,COMPLETE,-3.57892963854144,2.39803391538663,1,00:52,(:52) (Shotgun) L.Jackson pass short middle to M.Brown to BLT 44 for 8 yards (D.Bush).,
+2019100607,baltimore-ravens,5,Lamar Jackson,COMPLETE,6.24933582903166,3.66908858972351,2,14:25,"(14:25) (Shotgun) L.Jackson pass short right to H.Hurst to PIT 36 for 11 yards (J.Haden, M.Barron).",
+2019100607,baltimore-ravens,5,Lamar Jackson,COMPLETE,-16.7596747644226,2.5732517150589,2,13:04,(13:04) (Shotgun) L.Jackson pass short left to H.Hurst to PIT 35 for 2 yards (M.Barron).,
+2019100607,baltimore-ravens,5,Lamar Jackson,COMPLETE,-3.52126563678118,5.42010843617767,2,12:21,(12:21) (Shotgun) L.Jackson pass short middle to M.Andrews to PIT 11 for 24 yards (Te.Edmunds,
+2019100607,baltimore-ravens,5,Lamar Jackson,INCOMPLETE,19.7440128748007,14.3338760005427,2,11:32,(11:32) (Shotgun) L.Jackson pass incomplete short right to W.Snead (S.Nelson). Coverage by 22-Nelson. ,
+2019100607,baltimore-ravens,5,Lamar Jackson,TOUCHDOWN,9.38566198013774,14.9725771067235,2,11:26,"(11:26) (Shotgun) L.Jackson pass short right to M.Brown for 11 yards, TOUCHDOWN. ",
+2019100607,baltimore-ravens,5,Lamar Jackson,COMPLETE,17.475783477122,-4.99085111758021,2,07:31,(7:31) (Shotgun) L.Jackson pass short right to M.Ingram to BLT 11 for 1 yard (V.Williams,
+2019100607,baltimore-ravens,5,Lamar Jackson,INTERCEPTION,-3.29824555561017,14.5722219695477,2,06:50,(6:50) (Shotgun) L.Jackson pass short middle intended for M.Andrews INTERCEPTED by K.Kelly at BLT 26. K.Kelly to BLT 16 for 10 yards (M.Andrews). ,
+2019100607,baltimore-ravens,5,Lamar Jackson,INTERCEPTION,-24.8945562553845,6.28098484649065,2,00:36,(:36) (Shotgun) L.Jackson pass short left intended for S.Roberts INTERCEPTED by M.Hilton at BLT 26. M.Hilton ran ob at BLT 25 for 1 yard.,
+2019100607,baltimore-ravens,5,Lamar Jackson,COMPLETE,2.67951546470953,5.28022731726436,3,10:21,(10:21) (Shotgun) L.Jackson pass short middle to M.Andrews to PIT 49 for 7 yards (Te.Edmunds) [C.Heyward].,
+2019100607,baltimore-ravens,5,Lamar Jackson,INTERCEPTION,-10.345191071863,29.6285509333419,3,08:28,"(8:28) (Shotgun) L.Jackson pass deep middle intended for N.Boyle INTERCEPTED by D.Bush at PIT 13. D.Bush to PIT 13 for no gain (N.Boyle). The Replay Official reviewed the interception ruling, and the play was Upheld. The ruling on the field stands. ",
+2019100607,baltimore-ravens,5,Lamar Jackson,COMPLETE,-6.13747820384149,3.96953459373842,3,03:05,(3:05) (Shotgun) L.Jackson pass short left to H.Hurst to BLT 41 for 13 yards (J.Haden).,
+2019100607,baltimore-ravens,5,Lamar Jackson,COMPLETE,26.3308366100549,6.36816578483248,3,02:19,(2:19) (Shotgun) L.Jackson pass short right to H.Hurst ran ob at BLT 47 for 6 yards.,
+2019100607,baltimore-ravens,5,Lamar Jackson,COMPLETE,-8.03042561991949,7.15400770444634,3,01:01,(1:01) (Shotgun) L.Jackson pass short left to W.Snead to PIT 47 for 9 yards (D.Bush).,
+2019100607,baltimore-ravens,5,Lamar Jackson,COMPLETE,-10.7802465484629,11.7858399356673,3,00:24,(:24) (Shotgun) L.Jackson pass short left to W.Snead to PIT 24 for 23 yards (M.Hilton). ,
+2019100607,baltimore-ravens,5,Lamar Jackson,COMPLETE,-6.81086845355142,3.30479814802053,4,13:40,(13:40) (Shotgun) L.Jackson pass short middle to M.Brown to PIT 9 for 3 yards (T.Matakevich).,
+2019100607,baltimore-ravens,5,Lamar Jackson,COMPLETE,-19.9196766167138,3.3968276902824,4,12:51,(12:51) (Shotgun) L.Jackson pass short left to W.Snead to PIT 14 for 5 yards (M.Hilton).,
+2019100607,baltimore-ravens,5,Lamar Jackson,COMPLETE,-2.43586235874073,4.19357821280058,4,12:26,(12:26) (Shotgun) L.Jackson pass short middle to G.Edwards to PIT 8 for 6 yards (M.Fitzpatrick).,
+2019100607,baltimore-ravens,5,Lamar Jackson,INCOMPLETE,-5.41312504392067,7.60371482593705,4,07:14,(7:14) (Shotgun) L.Jackson pass incomplete short left to M.Andrews (M.Fitzpatrick). BLT-M.Andrews was injured during the play.,
+2019100607,baltimore-ravens,5,Lamar Jackson,INCOMPLETE,-9.07161523073826,4.07329180178646,4,07:09,(7:09) (Shotgun) L.Jackson pass incomplete short left to N.Boyle (V.Williams).,
+2019100607,baltimore-ravens,5,Lamar Jackson,COMPLETE,0.758244899207748,7.34677410058677,4,02:24,"(2:24) (Shotgun) L.Jackson pass short middle to W.Snead to PIT 44 for 14 yards (M.Fitzpatrick, V.Williams).",
+2019100607,baltimore-ravens,5,Lamar Jackson,COMPLETE,18.4479385572225,4.14885972142964,4,01:03,(1:03) (Shotgun) L.Jackson pass short right to M.Andrews to PIT 27 for 3 yards (V.Williams).,
+2019100607,baltimore-ravens,5,Lamar Jackson,INCOMPLETE,-29,36,4,00:20,"(:20) (Shotgun) L.Jackson pass incomplete deep left to S.Roberts. Coverage by 22-Nelson, 39-Fitzpatrick.",
+2019100607,baltimore-ravens,5,Lamar Jackson,COMPLETE,-14.6025471554862,-0.819858906525529,5,08:36,"(8:36) (Shotgun) L.Jackson pass short left to M.Andrews to BLT 21 for 1 yard (K.Kelly). Penalty on BLT, Illegal Shift, declined.",
+2020000000,baltimore-ravens,6,Lamar Jackson,INCOMPLETE,26.54744,27.72282,1,12:32:00 AM,(:32) (Shotgun) L.Jackson pass incomplete deep right to C.Moore.,
+2020000000,baltimore-ravens,6,Lamar Jackson,COMPLETE,17.48276,1.257273,1,12:15:00 PM,(12:15) (Shotgun) L.Jackson pass short right to H.Hurst to CIN 21 for 4 yards (N.Vigil).,
+2020000000,baltimore-ravens,6,Lamar Jackson,INCOMPLETE,-5.79664,12.32716,1,09:42:00 AM,(9:42) (Shotgun) L.Jackson pass incomplete short middle to M.Andrews.,
+2020000000,baltimore-ravens,6,Lamar Jackson,COMPLETE,-5.14665,-4.70334,1,09:38:00 AM,(9:38) (Shotgun) L.Jackson pass short left to M.Ingram to CIN 41 for 11 yards (A.Brown).,
+2020000000,baltimore-ravens,6,Lamar Jackson,COMPLETE,-2.79636,3.78003,1,08:21:00 AM,(8:21) (Shotgun) L.Jackson pass short middle to C.Moore to CIN 45 for 5 yards (N.Vigil).,
+2020000000,baltimore-ravens,6,Lamar Jackson,COMPLETE,-20.7612,7.964201,1,07:39:00 AM,(7:39) (Shotgun) L.Jackson pass short left to M.Andrews pushed ob at CIN 25 for 20 yards (G.Pratt).,
+2020000000,baltimore-ravens,6,Lamar Jackson,COMPLETE,-13.8699,7.512541,1,06:43:00 AM,(6:43) (Shotgun) L.Jackson pass short middle to M.Boykin to CIN 12 for 18 yards (D.Kirkpatrick,
+2020000000,baltimore-ravens,6,Lamar Jackson,COMPLETE,5.944949,0.607249,1,02:50:00 AM,(2:50) (Shotgun) L.Jackson pass short right to N.Boyle to BLT 30 for 9 yards (S.Williams).,
+2020000000,baltimore-ravens,6,Lamar Jackson,COMPLETE,12.19199,19.3142,1,01:05:00 AM,(1:05) (Shotgun) L.Jackson pass deep middle to M.Andrews pushed ob at CIN 24 for 39 yards (J.Bates III). CIN-D.Kirkpatrick was injured during the play.,
+2020000000,baltimore-ravens,6,Lamar Jackson,COMPLETE,-17.4373,1.603028,2,12:36:00 AM,"(1:36) (Shotgun) L.Jackson pass short middle to M.Andrews to BLT 44 for 16 yards (B.Wilson). FUMBLES (B.Wilson), RECOVERED by CIN-N.Vigil at BLT 46. N.Vigil to BLT 39 for 7 yards (J.Hill).",
+2020000000,baltimore-ravens,6,Lamar Jackson,COMPLETE,-15.8308,3.517351,2,12:31:00 AM,(:36) (Shotgun) L.Jackson pass short left to W.Snead pushed ob at BLT 30 for 5 yards (W.Jackson III).,
+2020000000,baltimore-ravens,6,Lamar Jackson,INCOMPLETE,-20.0215,22.50672,2,12:15:00 AM,(:31) (Shotgun) L.Jackson pass short left to W.Snead to BLT 40 for 10 yards (C.Lawson).,
+2020000000,baltimore-ravens,6,Lamar Jackson,INCOMPLETE,NA,NA,2,12:15:00 AM,(:15) L.Jackson spiked the ball to stop the clock.,
+2020000000,baltimore-ravens,6,Lamar Jackson,COMPLETE,14.4942,10.03429,2,10:35:00 AM,(10:35) L.Jackson pass short right to M.Boykin to BLT 18 for 10 yards (J.Bates III).,
+2020000000,baltimore-ravens,6,Lamar Jackson,COMPLETE,14.63321,5.382811,2,07:51:00 AM,(7:51) (Shotgun) L.Jackson pass short middle to M.Andrews to CIN 43 for 7 yards (W.Jackson III).,
+2020000000,baltimore-ravens,6,Lamar Jackson,INCOMPLETE,-10.0859,13.12561,2,06:34:00 AM,(6:34) (Shotgun) L.Jackson pass incomplete short middle to W.Snead (J.Bates III).,
+2020000000,baltimore-ravens,6,Lamar Jackson,INCOMPLETE,NA,NA,2,03:00:00 PM,(15:00) (Shotgun) L.Jackson pass incomplete deep left. Jackson throws ball away to avoid sack.,
+2020000000,baltimore-ravens,6,Lamar Jackson,COMPLETE,-2.61035,-1.81846,2,02:18:00 AM,(2:18) L.Jackson pass short left to P.Ricard to BLT 28 for 6 yards (G.Pratt).,
+2020000000,baltimore-ravens,6,Lamar Jackson,COMPLETE,8.229485,7.018753,2,01:36:00 AM,(2:00) (Shotgun) L.Jackson pass short right to M.Andrews to BLT 36 for 8 yards (S.Williams).,
+2020000000,baltimore-ravens,6,Lamar Jackson,INCOMPLETE,-20.7841,-5.70547,3,12:22:00 AM,(1:43) (Shotgun) L.Jackson pass short right to S.Roberts to CIN 35 for 16 yards (S.Hubbard).,
+2020000000,baltimore-ravens,6,Lamar Jackson,INCOMPLETE,NA,NA,3,12:15:00 AM,(:22) (Shotgun) L.Jackson pass incomplete short left to M.Ingram.,
+2020000000,baltimore-ravens,6,Lamar Jackson,INCOMPLETE,9.133403,7.403787,3,11:56:00 AM,(14:08) (Shotgun) L.Jackson pass short middle to M.Andrews to CIN 48 for 9 yards (T.McTyer).,
+2020000000,baltimore-ravens,6,Lamar Jackson,COMPLETE,1.468041,0.75733,3,05:37:00 AM,(11:56) (Shotgun) L.Jackson pass incomplete short middle to M.Andrews (L.Reynolds).,
+2020000000,baltimore-ravens,6,Lamar Jackson,COMPLETE,-16.4693,6.961641,3,03:38:00 AM,(5:37) (Shotgun) L.Jackson pass short middle to M.Ingram to BLT 27 for 11 yards (T.McRae).,
+2020000000,baltimore-ravens,6,Lamar Jackson,INCOMPLETE,5.316652,5.124927,3,03:00:00 PM,(:15) (Shotgun) L.Jackson pass incomplete deep left to M.Boykin.,
+2020000000,baltimore-ravens,6,Lamar Jackson,COMPLETE,10.00701,3.104431,3,02:56:00 PM,(15:00) (Shotgun) L.Jackson pass incomplete short middle to N.Boyle (N.Vigil).,
+2020000000,baltimore-ravens,6,Lamar Jackson,COMPLETE,-2.5751,8.579764,3,02:08:00 PM,(14:56) (Shotgun) L.Jackson pass short middle to W.Snead to BLT 43 for 3 yards (P.Brown).,
+2020000000,baltimore-ravens,6,Lamar Jackson,COMPLETE,14.41729,3.337886,3,01:43:00 AM,(3:38) (Shotgun) L.Jackson pass short left to S.Roberts to BLT 41 for 7 yards (T.McRae).,
+2020000000,baltimore-ravens,6,Lamar Jackson,COMPLETE,-5.90613,7.48228,4,12:36:00 PM,(:15) (Shotgun) L.Jackson pass incomplete deep right. Jackson throws ball away.,
+2020000000,baltimore-ravens,6,Lamar Jackson,COMPLETE,-8.28014,5.328717,4,12:36:00 PM,(12:36) (Shotgun) L.Jackson pass short middle to C.Moore to BLT 35 for 13 yards (J.Bates III).,
+2020000000,baltimore-ravens,6,Lamar Jackson,INCOMPLETE,-12.1249,20.27434,4,08:40:00 AM,(8:40) (Shotgun) L.Jackson pass incomplete short left to W.Snead.,
+2020000000,baltimore-ravens,6,Lamar Jackson,COMPLETE,-17.757,11.17068,4,05:30:00 AM,"(5:30) L.Jackson pass short left to N.Boyle to CIN 12 for 9 yards (N.Vigil, P.Brown).",
+2020000000,baltimore-ravens,6,Lamar Jackson,INCOMPLETE,-14.0204,0.36067,4,03:52:00 AM,(3:52) (Shotgun) L.Jackson pass incomplete short left to N.Boyle.,
+2019102010,baltimore-ravens,7,Lamar Jackson,COMPLETE,-16.88861835,9.547420723,1,02:20:00 PM,(14:20) (Shotgun) L.Jackson pass short left to S.Roberts to BLT 31 for 9 yards (T.Flowers).,
+2019102010,baltimore-ravens,7,Lamar Jackson,COMPLETE,-21.99079232,4.917109085,1,01:40:00 PM,(13:40) (Shotgun) L.Jackson pass short left to M.Boykin pushed ob at BLT 36 for 5 yards (T.Flowers).,
+2019102010,baltimore-ravens,7,Lamar Jackson,COMPLETE,10.87109607,47.59996585,1,01:13:00 PM,(13:13) (Shotgun) L.Jackson pass deep right to M.Boykin to SEA 14 for 50 yards (T.Thompson).,
+2019102010,baltimore-ravens,7,Lamar Jackson,COMPLETE,16.07332922,-2.014713474,1,08:35:00 AM,(8:35) (Shotgun) L.Jackson pass short right to C.Moore pushed ob at BLT 31 for 3 yards (M.Kendricks).,
+2019102010,baltimore-ravens,7,Lamar Jackson,INCOMPLETE,-7.989457017,6.015647797,1,06:06:00 AM,(6:06) (Shotgun) L.Jackson pass incomplete short middle to M.Andrews.,
+2019102010,baltimore-ravens,7,Lamar Jackson,INCOMPLETE,11.27863231,7.822739834,1,06:02:00 AM,(6:02) (Shotgun) L.Jackson pass incomplete short right to W.Snead (K.Wright).,
+2019102010,baltimore-ravens,7,Lamar Jackson,INCOMPLETE,-24.68141367,14.22470147,2,02:46:00 PM,(14:46) L.Jackson pass incomplete short left to S.Roberts (T.Flowers).,
+2019102010,baltimore-ravens,7,Lamar Jackson,COMPLETE,15.73454315,28.13126304,2,12:40:00 PM,(12:40) (Shotgun) L.Jackson pass deep right to M.Andrews to SEA 12 for 33 yards (K.Wright).,
+2019102010,baltimore-ravens,7,Lamar Jackson,INCOMPLETE,3.45368484,0.06449244966,2,11:18:00 AM,(11:18) (Shotgun) L.Jackson pass incomplete short middle to H.Hurst.,
+2019102010,baltimore-ravens,7,Lamar Jackson,INCOMPLETE,-6.558915325,9.519544712,2,11:14:00 AM,"(11:14) (Shotgun) L.Jackson pass incomplete short middle to M.Andrews (B.Wagner). Penalty on BLT-R.Stanley, Illegal Formation, declined.",
+2019102010,baltimore-ravens,7,Lamar Jackson,INCOMPLETE,12.88775845,10.37932206,2,07:35:00 AM,(7:35) (Shotgun) L.Jackson pass incomplete short right to S.Roberts.,
+2019102010,baltimore-ravens,7,Lamar Jackson,INCOMPLETE,-12.72463526,8.616970278,3,12:13:00 PM,(12:13) (Shotgun) L.Jackson pass incomplete short left to S.Roberts.,
+2019102010,baltimore-ravens,7,Lamar Jackson,COMPLETE,-12.41405956,6.069768401,3,12:10:00 PM,(12:10) (Shotgun) L.Jackson pass short left to M.Andrews to BLT 22 for 6 yards (T.Flowers).,
+2019102010,baltimore-ravens,7,Lamar Jackson,COMPLETE,24.55099242,10.99799688,3,05:31:00 AM,(5:31) (Shotgun) L.Jackson pass short right to H.Hurst pushed ob at SEA 42 for 10 yards (Sq.Griffin).,
+2019102010,baltimore-ravens,7,Lamar Jackson,INCOMPLETE,-7.259347406,19.30241156,3,02:15:00 AM,(2:15) (Shotgun) L.Jackson pass incomplete deep middle to M.Andrews (K.Wright).,
+2019102010,baltimore-ravens,7,Lamar Jackson,INCOMPLETE,9.230310684,6.624861949,3,02:10:00 AM,(2:10) (Shotgun) L.Jackson pass incomplete short right to M.Andrews.,
+2019102010,baltimore-ravens,7,Lamar Jackson,INCOMPLETE,6.912535104,13.370829,4,12:13:00 PM,(12:13) (Shotgun) L.Jackson pass incomplete short middle to M.Andrews.,
+2019102010,baltimore-ravens,7,Lamar Jackson,COMPLETE,7.600075238,-1.927125023,4,12:08:00 PM,"(12:08) (Shotgun) L.Jackson pass short right to M.Ingram to BLT 12 for 7 yards (P.Ford, B.Wagner).",
+2019102010,baltimore-ravens,7,Lamar Jackson,COMPLETE,8.191428253,-1.811158157,4,07:13:00 AM,(7:13) L.Jackson pass short right to N.Boyle to SEA 7 for 20 yards (M.Blair).,
+,,,,,,,,,(:17) (Shotgun) L.Jackson sacked at BLT 47 for -7 yards (D.Randall).,
+,,,,,,,,,(12:03) (Shotgun) L.Jackson sacked at CLV 23 for 0 yards (L.Ogunjobi).,
+,,,,,,,,,(2:00) (Shotgun) L.Jackson sacked at BLT 16 for -10 yards (J.Schobert).,
