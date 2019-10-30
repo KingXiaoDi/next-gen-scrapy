@@ -19,6 +19,29 @@ import sys
 import re
 import os
 
+def get_XL_Image_URL(season, team, week):
+	pattern = re.compile("charts")
+	URL = "https://nextgenstats.nfl.com/charts/list/pass/" + team + "/" + season + "/" + week
+	r = requests.get(URL)
+	print (URL)
+
+	soup = BeautifulSoup(r.content, "html.parser")
+
+	script = soup.find_all("script", text=pattern)
+	
+	contains_charts = json.loads(str(script[0])[33:-131])
+			
+	if (len(contains_charts["charts"]["charts"]) != 0):
+			for chart in contains_charts["charts"]['charts']['charts']:
+				name = chart["lastName"] + "_" + chart["firstName"] + "_" + chart["position"]
+				chart["team"] = team
+
+				folder = str("Pass_Charts" + os.sep + team + os.sep + season + os.sep + week + os.sep)
+				img_folder = folder + "images" + os.sep
+				data_folder = folder + "data" + os.sep
+				url = "https:" + chart["extraLargeImg"]
+				print (url)
+
 teams = ["arizona-cardinals",
 	"atlanta-falcons",
 	"baltimore-ravens",
@@ -52,6 +75,9 @@ teams = ["arizona-cardinals",
 	"tennessee-titans",
 	"washington-redskins"
 ]
+
+#get_XL_Image_URL('2019', 'cincinnati-bengals', '8')
+#sys.exit()
 
 week = sys.argv[1]
 print (week)
@@ -98,6 +124,8 @@ for team in teams:
 
 					img_file = img_folder + name + ".jpeg"
 					url = "https:" + chart["extraLargeImg"]
+					print (url)
+					sys.exit()
 					urllib.request.urlretrieve(url, img_file)
 
 					data_file = data_folder + name + ".txt"
