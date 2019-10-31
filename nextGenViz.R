@@ -32,10 +32,10 @@ lamarWithAllData <- inner_join(df %>%
 for (each in lamarWithAllData %>%
      distinct(target) %>%
      pull(target)) {
-  print (each)
-  make_Composite_Charts_For_Receiver(lamarWithAllData, each, save)
-  write_Tweet_Content(lamarWithAllData %>%
-                        filter(target == each))
+  if ((each != 'spike') & !is.na(each)) {
+    print (each)
+    make_Composite_Charts_For_Receiver(lamarWithAllData, each, save)
+  }
 }
 
 for (each in seq(1,4)) {
@@ -85,7 +85,8 @@ oppD <- all %>%
            week == names(opp)[4] & team == opp[[4]]|
            week == names(opp)[5] & team == opp[[5]]|
            week == names(opp)[6] & team == opp[[6]]|
-           week == names(opp)[7] & team == opp[[7]])
+           week == names(opp)[7] & team == opp[[7]]|
+           week == names(opp)[8] & team == opp[[8]])
 
 oppD %>%
   summarize(Com = sum(pass_type == 'COMPLETE') + sum(pass_type == 'TOUCHDOWN'),
