@@ -33,7 +33,7 @@ for (each in lamarWithAllData %>%
      distinct(target) %>%
      pull(target)) {
   print (each)
-  #make_Composite_Charts_For_Receiver(lamarWithAllData, each, save)
+  make_Composite_Charts_For_Receiver(lamarWithAllData, each, save)
   write_Tweet_Content(lamarWithAllData %>%
                         filter(target == each))
 }
