@@ -1,9 +1,12 @@
 library(tidyverse)
+library(ggimage)
 library(gam)
 source('nflFunctions.R')
 
 setwd('c:/users/yoshi/documents/football/ravens/')
 setwd('c:/users/jmost/documents/football/ravens/')
+
+save <- '../next-gen-scrapy/compositeCharts'
 
 all <- read_csv('../next-gen-scrapy/pass_locations.csv') %>%
   mutate(pass_type = factor(pass_type, levels = c('COMPLETE', 'INCOMPLETE', 'INTERCEPTION', 'TOUCHDOWN')))
@@ -44,8 +47,6 @@ for (each in seq(1,4)) {
 }
 
 make_Composite_Charts_For_Receiver(lamarWithAllData, 'N.Boyle', save)
-
-save <- '../next-gen-scrapy/compositeCharts'
 
 lamar <- all %>%
   filter(name == 'Lamar Jackson')
@@ -237,3 +238,63 @@ df %>%
 df %>%
   filter(gain == 21,
          type == 'pass')
+
+
+all %>%
+  filter(y<0) %>%
+  summarize(Com = sum(pass_type == 'COMPLETE') + sum(pass_type == 'TOUCHDOWN'),
+                           Att = n(),
+                           TD = sum(pass_type == 'TOUCHDOWN'),
+                           INT = sum(pass_type == 'INTERCEPTION'),
+                           AvgAirYards = mean(y[pass_type %in% c('COMPLETE', 'TOUCHDOWN')]),
+                           AvgAirYardsAtt = mean(y, na.rm=T))
+
+intBehindLoS <- all %>%
+  filter(y<0, 
+         pass_type == 'INTERCEPTION') %>%
+  arrange(week)
+
+xmin <- -160/6
+xmax <- 160/6
+ymin <- -15
+ymax <- 5
+hashX <- 18.5/6
+yardMarkers <- c(-15, -10, -5, 0, 5)#, seq(10,60,10))
+hashY <- seq(ymin,ymax)[which(seq(ymin,ymax)%%5!=0)]
+
+cols <- c("Andrew Dalton" = "http://content.sportslogos.net/logos/7/154/thumbs/403.gif", 
+          "Baker Mayfield" = 'http://content.sportslogos.net/logos/7/155/thumbs/2ioheczrkmc2ibc42c9r.gif',
+          "Elisha Manning" = "http://content.sportslogos.net/logos/7/166/thumbs/919.gif",
+          "Gardner Minshew" = 'http://content.sportslogos.net/logos/7/159/thumbs/15988562013.gif',
+          "James Garoppolo" = 'http://content.sportslogos.net/logos/7/179/thumbs/17994552009.gif',
+          "Jared Goff" = 'http://content.sportslogos.net/logos/7/178/thumbs/1029.gif',
+          "Kyle Allen" = 'http://content.sportslogos.net/logos/7/174/thumbs/f1wggq2k8ql88fe33jzhw641u.gif',
+          "Kyler Murray" = 'http://content.sportslogos.net/logos/7/177/thumbs/kwth8f1cfa2sch5xhjjfaof90.gif',
+          "Lamar Jackson" = 'http://content.sportslogos.net/logos/7/153/thumbs/318.gif',
+          "Luke Falk" = 'http://content.sportslogos.net/logos/7/152/thumbs/v7tehkwthrwefgounvi7znf5k.gif', 
+          "Matthew Ryan" = 'http://content.sportslogos.net/logos/7/173/thumbs/299.gif')
+
+ggplot(intBehindLoS, aes(x, y)) +
+  theme_classic() +
+  labs(title=sprintf('%s 2019', "INT Behind LoS")) +
+  theme(panel.background = element_rect(fill = 'black'),
+        axis.line=element_blank(), axis.text.x=element_blank(),  
+        axis.text.y=element_blank(), axis.ticks=element_blank(),
+        axis.title.x=element_blank(), axis.title.y=element_blank()) +
+  annotate("text", x = -hashX, y = hashY, 
+           label = "_", hjust = 0, vjust = -0.2, color='grey') + 
+  annotate("text", x = hashX, y = hashY,
+           label = "_", hjust = 1, vjust = -0.2, color='grey') + 
+  annotate("segment", x = xmin, y = seq(ymin, ymax, by = 5), 
+           xend =  xmax, yend = seq(ymin, ymax, by = 5), color='grey') + 
+  annotate("segment", x = c(xmin, xmax), y = c(ymin, ymax), 
+           xend = c(xmin, xmax), yend = c(ymax, ymin), colour = "grey", size = 2) +
+  geom_hline(yintercept = 0, color='#0072E4', size=1.5) +
+  annotate("text", x = -160/6-1, y = seq(ymin, ymax, by = 5), 
+           label = yardMarkers, size = 4, color='white') + 
+  annotate("text", x = 160/6+1, y = seq(ymin, ymax, by = 5), 
+           label = yardMarkers, size = 4, color='white') +
+  #geom_point(aes(fill=name), shape = 21, size=10) +
+  geom_image(aes(image=cols), size=.075)
+
+ggsave(file=sprintf('%s/%s plot.png', save, 'Int Behind LoS'), width=11.5, height=8)
