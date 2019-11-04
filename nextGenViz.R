@@ -52,6 +52,7 @@ lamar <- all %>%
   filter(name == 'Lamar Jackson')
 
 make_Composite_Charts_For_QB(lamar, 'Lamar Jackson', save, 'Lamar Jackson')
+make_Composite_Charts_For_QB(all, 'Mitchell Trubisky', save, 'delete')
 for (each in all %>%
      distinct(name) %>%
      pull(name)) {
