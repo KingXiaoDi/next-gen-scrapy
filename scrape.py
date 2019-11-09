@@ -125,7 +125,7 @@ for team in teams:
 					img_file = img_folder + name + ".jpeg"
 					url = "https:" + chart["extraLargeImg"]
 					print (url)
-					sys.exit()
+					#sys.exit()
 					urllib.request.urlretrieve(url, img_file)
 
 					data_file = data_folder + name + ".txt"
