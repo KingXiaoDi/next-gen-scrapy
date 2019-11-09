@@ -42,7 +42,7 @@ for (each in lamarWithAllData %>%
 }
 
 for (each in seq(1,4)) {
-  make_Composite_Charts(lamarWithAllData %>%
+  make_Composite_Charts_For_QB(lamarWithAllData %>%
                         filter(down == each), 'all', save, sprintf('Down %d', each))
 }
 
@@ -66,9 +66,10 @@ ravensD <- all %>%
            (team == 'cleveland-browns' & week == 4)|
            team == 'pittsburgh-steelers' & week == 5|
            team == 'cincinnati-bengals' & week == 6|
-           team == 'seattle-seahawks' & week == 7)
+           team == 'seattle-seahawks' & week == 7|
+           team == 'new-england-patriots' & week == 9)
 
-make_Chart(ravensD, "Ravens D", '0')
+make_Chart(ravensD, "Ravens D", '0', write_Tweet_Content(ravensD))
 ggsave(file=sprintf('%s/%s plot.png', save, 'Ravens D'), width=11.5, height=8)
 
 opp <- list('1' = 'pittsburgh-steelers',
@@ -299,3 +300,15 @@ ggplot(intBehindLoS, aes(x, y)) +
   geom_image(aes(image=cols), size=.075)
 
 ggsave(file=sprintf('%s/%s plot.png', save, 'Int Behind LoS'), width=11.5, height=8)
+
+
+lamarWithAllData %>%
+  filter(target == 'M.Ingram') %>%
+  select(date, q, time, pass_type, complete) %>%
+  arrange(date, q, desc(time))
+
+lamarWithAllData %>%
+  filter(date == '2019-10-13') %>%
+  select(date, q, time, pass_type, complete) %>%
+  arrange(date, q, desc(time))
+
