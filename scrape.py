@@ -124,8 +124,8 @@ for team in teams:
 
 					img_file = img_folder + name + ".jpeg"
 					url = "https:" + chart["extraLargeImg"]
-					print (url)
-					#sys.exit()
+					if name == 'Jackson_Lamar_QB':
+						print (url)
 					urllib.request.urlretrieve(url, img_file)
 
 					data_file = data_folder + name + ".txt"
