@@ -1,5 +1,3 @@
-library(tidyverse)
-library(ggimage)
 library(gam)
 source('nflFunctions.R')
 
@@ -312,3 +310,24 @@ lamarWithAllData %>%
   select(date, q, time, pass_type, complete) %>%
   arrange(date, q, desc(time))
 
+all %>%
+  filter(name == 'Mason Rudolph' ) %>%
+  mutate(Depth = case_when(y >= 15~ 'deep',
+                           y < 15 ~ 'short',
+                           TRUE ~ 'NA')) %>%
+  group_by(Depth) %>%
+  summarize(Com = sum(pass_type %in% c('COMPLETE', 'TOUCHDOWN')),
+            Att = n(),
+            TD = sum(pass_type == 'TOUCHDOWN'),
+            INT = sum(pass_type == 'INTERCEPTED'))
+
+all %>%
+  filter(name == 'Lamar Jackson' ) %>%
+  mutate(Depth = case_when(y >= 15~ 'deep',
+                           y < 15 ~ 'short',
+                           TRUE ~ 'NA')) %>%
+  group_by(Depth) %>%
+  summarize(Com = sum(pass_type %in% c('COMPLETE', 'TOUCHDOWN')),
+            Att = n(),
+            TD = sum(pass_type == 'TOUCHDOWN'),
+            INT = sum(pass_type == 'INTERCEPTED'))
