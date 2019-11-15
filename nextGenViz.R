@@ -65,19 +65,21 @@ ravensD <- all %>%
            team == 'pittsburgh-steelers' & week == 5|
            team == 'cincinnati-bengals' & week == 6|
            team == 'seattle-seahawks' & week == 7|
-           team == 'new-england-patriots' & week == 9)
+           team == 'new-england-patriots' & week == 9|
+           team == 'cincinnati-bengals' & week == 10)
 
 make_Chart(ravensD, "Ravens D", '0', write_Tweet_Content(ravensD))
 ggsave(file=sprintf('%s/%s plot.png', save, 'Ravens D'), width=11.5, height=8)
 
-opp <- list('1' = 'pittsburgh-steelers',
-            '2' = 'miami-dolphins',
-            '3' = 'new-york-jets',
-            '4' = 'buffalo-bills',
-            '5' = 'washington-redskins',
-            '6' = 'new-york-giants',
-            '7' = 'new-york-jets',
-            '8' = 'cleveland-browns')
+opp <- list('1' = 'new-orleans-saints',
+            '2' = 'jacksonville-jaguars',
+            '3' = 'los-angeles-chargers',
+            '4' = 'carolina-panthers',
+            '5' = 'atlanta-falcons',
+            '6' = 'kansas-city-chiefs',
+            '7' = 'indianapolis-colts',
+            '8' = 'oakland-raiders',
+            '9' = 'jacksonville-jaguars')
 
 oppD <- all %>%
   filter(week == names(opp)[1] & team == opp[[1]]|
@@ -87,7 +89,12 @@ oppD <- all %>%
            week == names(opp)[5] & team == opp[[5]]|
            week == names(opp)[6] & team == opp[[6]]|
            week == names(opp)[7] & team == opp[[7]]|
-           week == names(opp)[8] & team == opp[[8]])
+           week == names(opp)[8] & team == opp[[8]]|
+           week == names(opp)[9] & team == opp[[9]])
+
+oppName = 'TexansD'
+make_Chart(oppD, oppName, '0', write_Tweet_Content(oppD))
+ggsave(file=sprintf('%s/%s plot.png', save, oppName), width=11.5, height=8)
 
 oppD %>%
   summarize(Com = sum(pass_type == 'COMPLETE') + sum(pass_type == 'TOUCHDOWN'),
@@ -96,15 +103,6 @@ oppD %>%
             INT = sum(pass_type == 'INTERCEPTION'),
             AvgAirYards = mean(y[pass_type %in% c('COMPLETE', 'TOUCHDOWN')]),
             AvgAirYardsAtt = mean(y, na.rm=T))
-
-write_Tweet_Content(oppD)
-
-oppD %>%
-  filter(pass_type == 'INTERCEPTION')
-
-oppName = 'patriotsD'
-make_Chart(oppD, oppName, 'LoS')
-ggsave(file=sprintf('%s/%s plot.png', save, oppName), width=11.5, height=8)
 
 oppD %>% 
   filter(y>=-100,
@@ -331,3 +329,8 @@ all %>%
             Att = n(),
             TD = sum(pass_type == 'TOUCHDOWN'),
             INT = sum(pass_type == 'INTERCEPTED'))
+
+df %>%
+  filter(date == '2019.11.10',
+         type == 'pass',
+         possession == 'BLT')
