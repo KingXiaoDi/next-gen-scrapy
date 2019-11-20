@@ -328,9 +328,20 @@ all %>%
   summarize(Com = sum(pass_type %in% c('COMPLETE', 'TOUCHDOWN')),
             Att = n(),
             TD = sum(pass_type == 'TOUCHDOWN'),
-            INT = sum(pass_type == 'INTERCEPTED'))
+            INT = sum(pass_type == 'INTERCEPTION'))
 
 df %>%
   filter(date == '2019.11.10',
          type == 'pass',
          possession == 'BLT')
+
+all %>%
+  filter(name == 'Jared Goff') %>%
+  mutate(Depth = case_when(y >= 20~ 'deep',
+                           y < 20 ~ 'short',
+                           TRUE ~ 'NA')) %>%
+  group_by(Depth) %>%
+  summarize(Com = sum(pass_type %in% c('COMPLETE', 'TOUCHDOWN')),
+            Att = n(),
+            TD = sum(pass_type == 'TOUCHDOWN'),
+            INT = sum(pass_type == 'INTERCEPTION'))
