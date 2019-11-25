@@ -49,6 +49,13 @@ make_Composite_Charts_For_Receiver(lamarWithAllData, 'N.Boyle', save)
 lamar <- all %>%
   filter(name == 'Lamar Jackson')
 
+lamarTD <- lamar %>%
+  filter(pass_type == 'TOUCHDOWN')
+
+19*.7
+
+make_Composite_Charts_For_QB(lamarTD, 'Lamar Jackson', save, 'Lamar Jackson TDs')
+
 make_Composite_Charts_For_QB(lamar, 'Lamar Jackson', save, 'Lamar Jackson')
 make_Composite_Charts_For_QB(all, 'Mitchell Trubisky', save, 'delete')
 for (each in all %>%
@@ -56,6 +63,14 @@ for (each in all %>%
      pull(name)) {
   make_Composite_Charts_For_QB(all, each, save, each)
 }
+
+for (each in all %>%
+     distinct(name) %>%
+     pull(name)) {
+  make_Composite_Charts_For_QB(all %>% 
+                                 filter(pass_type == 'TOUCHDOWN'), each, save, sprintf('TDs %s', each))
+}
+print (sprintf('TDs %s', each))
 
 ravensD <- all %>%
   filter((team == 'miami-dolphins' & week == 1)|
@@ -345,3 +360,34 @@ all %>%
             Att = n(),
             TD = sum(pass_type == 'TOUCHDOWN'),
             INT = sum(pass_type == 'INTERCEPTION'))
+
+
+
+all %>%
+  filter(name == 'Russell Wilson') %>%
+  group_by(week) %>%
+  tally
+
+
+lamar %>%
+  mutate(Direction = cut(x, 5)) %>%
+  group_by(Direction) %>%
+  tally
+
+all %>%
+  mutate(Direction = cut(x, 3)) %>%
+  filter(!is.na(Direction)) %>%
+  group_by(name, Direction) %>%
+  summarize(Att = n()) %>%
+  mutate(PercentOfThrows = Att/sum(Att)) %>%
+  arrange(-PercentOfThrows) %>% View()
+
+combined %>% filter(Skill5 == 89, down==3) %>%
+  group_by(type) %>%
+  tally %>%
+  filter(type %in% c('pass', 'sack', 'scramble', 'run')) %>%
+  mutate(Per = n/sum(n)) %>%
+  arrange(-n)
+
+
+lamarWithAllData 
