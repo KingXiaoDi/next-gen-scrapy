@@ -23,6 +23,7 @@ anti_join(df %>%
          !is.na(type)) %>%
   select(date, q, time, detail) %>%
   arrange(date)
+
 lamarWithAllData <- inner_join(df %>%
                                  mutate(date = as.Date(date, '%Y.%m.%d')),
                                lamarQT,
@@ -44,20 +45,11 @@ for (each in seq(1,4)) {
                         filter(down == each), 'all', save, sprintf('Down %d', each))
 }
 
-make_Composite_Charts_For_Receiver(lamarWithAllData, 'N.Boyle', save)
-
-lamar <- all %>%
-  filter(name == 'Lamar Jackson')
-
 lamarTD <- lamar %>%
   filter(pass_type == 'TOUCHDOWN')
 
-19*.7
-
 make_Composite_Charts_For_QB(lamarTD, 'Lamar Jackson', save, 'Lamar Jackson TDs')
 
-make_Composite_Charts_For_QB(lamar, 'Lamar Jackson', save, 'Lamar Jackson')
-make_Composite_Charts_For_QB(all, 'Mitchell Trubisky', save, 'delete')
 for (each in all %>%
      distinct(name) %>%
      pull(name)) {
@@ -312,28 +304,6 @@ ggplot(intBehindLoS, aes(x, y)) +
 
 ggsave(file=sprintf('%s/%s plot.png', save, 'Int Behind LoS'), width=11.5, height=8)
 
-
-lamarWithAllData %>%
-  filter(target == 'M.Ingram') %>%
-  select(date, q, time, pass_type, complete) %>%
-  arrange(date, q, desc(time))
-
-lamarWithAllData %>%
-  filter(date == '2019-10-13') %>%
-  select(date, q, time, pass_type, complete) %>%
-  arrange(date, q, desc(time))
-
-all %>%
-  filter(name == 'Mason Rudolph' ) %>%
-  mutate(Depth = case_when(y >= 15~ 'deep',
-                           y < 15 ~ 'short',
-                           TRUE ~ 'NA')) %>%
-  group_by(Depth) %>%
-  summarize(Com = sum(pass_type %in% c('COMPLETE', 'TOUCHDOWN')),
-            Att = n(),
-            TD = sum(pass_type == 'TOUCHDOWN'),
-            INT = sum(pass_type == 'INTERCEPTED'))
-
 all %>%
   filter(name == 'Lamar Jackson' ) %>%
   mutate(Depth = case_when(y >= 15~ 'deep',
@@ -344,30 +314,6 @@ all %>%
             Att = n(),
             TD = sum(pass_type == 'TOUCHDOWN'),
             INT = sum(pass_type == 'INTERCEPTION'))
-
-df %>%
-  filter(date == '2019.11.10',
-         type == 'pass',
-         possession == 'BLT')
-
-all %>%
-  filter(name == 'Jared Goff') %>%
-  mutate(Depth = case_when(y >= 20~ 'deep',
-                           y < 20 ~ 'short',
-                           TRUE ~ 'NA')) %>%
-  group_by(Depth) %>%
-  summarize(Com = sum(pass_type %in% c('COMPLETE', 'TOUCHDOWN')),
-            Att = n(),
-            TD = sum(pass_type == 'TOUCHDOWN'),
-            INT = sum(pass_type == 'INTERCEPTION'))
-
-
-
-all %>%
-  filter(name == 'Russell Wilson') %>%
-  group_by(week) %>%
-  tally
-
 
 lamar %>%
   mutate(Direction = cut(x, 5)) %>%
@@ -391,3 +337,7 @@ combined %>% filter(Skill5 == 89, down==3) %>%
 
 
 lamarWithAllData 
+
+
+make_Composite_Charts_For_QB(all %>%
+                               filter(week > 3), 'Lamar Jackson', save, 'Lamar Since Week 4')
