@@ -58,7 +58,7 @@ make_Chart(ravensD, "Ravens D", '0', write_Tweet_Content(ravensD))
 ggsave(file=sprintf('%s/%s plot.png', save, 'Ravens D'), width=11.5, height=8)
 
 
-oppName = 'BillD'
+oppName = 'JetsD'
 make_Chart(oppD, oppName, '0', write_Tweet_Content(oppD))
 ggsave(file=sprintf('%s/%s plot.png', save, oppName), width=11.5, height=8)
 
@@ -145,25 +145,6 @@ plot <- prep %>%
 ggplot(plot, aes(x, y)) +
   geom_raster(aes(fill=expC)) +
   scale_fill_gradient2(mid = 'red', high='#01016b')
-
-lamarZone <- summarize_By_Zone(zone_Data(lamar))
-seahawks <- summarize_By_Zone(zone_Data(oppD)) 
-league <- summarize_By_Zone(zone_Data(all))
-
-write.csv(inner_join(lamarZone, league, by="vertZone",
-                     suffix = c('', '_NFL')) %>%
-            select(1,5,10,6,11,2,7,3,8,4,9),
-          file = 'lamar vs league.csv',
-          row.names=F)
-
-all %>%
-  filter(y<0) %>%
-  summarize(Com = sum(pass_type == 'COMPLETE') + sum(pass_type == 'TOUCHDOWN'),
-                           Att = n(),
-                           TD = sum(pass_type == 'TOUCHDOWN'),
-                           INT = sum(pass_type == 'INTERCEPTION'),
-                           AvgAirYards = mean(y[pass_type %in% c('COMPLETE', 'TOUCHDOWN')]),
-                           AvgAirYardsAtt = mean(y, na.rm=T))
 
 intBehindLoS <- all %>%
   filter(y<0, 
