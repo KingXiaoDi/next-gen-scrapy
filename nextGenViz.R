@@ -1,8 +1,14 @@
 library(gam)
 source('nflFunctions.R')
 
+
 setwd('c:/users/yoshi/documents/football/ravens/')
 setwd('c:/users/jmost/documents/football/ravens/')
+
+setwd('games/2019')
+seasonDF <- load_DF_For_Stats('season', 'Ravens') %>%
+  mutate(target = recode(target, M.Ingram = 'M.Ingram II', W.Snead = 'W.Snead IV'))
+setwd('../..')
 
 save <- '../next-gen-scrapy/compositeCharts'
 
@@ -38,7 +44,7 @@ for (receiver in lamarWithAllData %>% distinct(target) %>% pull(target)) {
 
 for (each in seq(1,4)) {
   make_Composite_Charts_For_QB(lamarWithAllData %>%
-                        filter(down == each), 'all', save, sprintf('Lamar/Down %d', each))
+                        filter(down == each), 'all', save, sprintf('Lamar/Downs/Down %d', each))
 }
 
 lamarTD <- lamar %>%
@@ -195,3 +201,60 @@ ggplot(intBehindLoS, aes(x, y)) +
   geom_image(aes(image=cols), size=.075)
 
 ggsave(file=sprintf('%s/%s plot.png', save, 'Int Behind LoS'), width=11.5, height=8)
+
+plotData <- lamarWithAllData %>%
+  separate(los, c('side', 'yard'), remove=F) %>%
+  mutate(yard = as.numeric(yard),
+         yard = case_when(is.na(yard)~50,
+                          side=='BLT'~yard,
+                          TRUE~100-yard)) %>%
+  select(c(date, q, time, los, side, yard))
+
+ggplot(plotData, aes(yard)) +
+  geom_histogram(binwidth=5)
+
+ggplot(convert_LoS(seasonDF) %>%
+         mutate(type = case_when(type %in% c('pass', 'sack', 'scramble')~'dropback',
+                                 type %in% c('run', 'fumbledExchange')~'run',
+                                 TRUE ~ NA_character_)) %>%
+         filter(!is.na(type),
+                possession == 'BLT',
+                !type %in% c('kickoff', 'XP', 'FGA', 'kneel', '2PT', 'punt')), aes(yard, fill=type)) +
+  geom_histogram(binwidth=5)
+
+
+calculate_qb_rating_Attempts(lamarWithLoSgroup %>%
+                               group_by(losGrouped) %>%
+                               summarize(Com = sum(pass_type == 'COMPLETE') + sum(pass_type == 'TOUCHDOWN'),
+                                         Att = n(),
+                                         Yards = sum(gain),
+                                         TD = sum(pass_type == 'TOUCHDOWN'),
+                                         INT = sum(pass_type == 'INTERCEPTION'),
+                                         AvgAirYards = mean(y[pass_type %in% c('COMPLETE', 'TOUCHDOWN')]),
+                                         AvgAirYardsAtt = mean(y, na.rm=T)) %>%
+                               mutate(ComPer = round(100*Com/Att,1)))
+
+plot_Lamar_By_LoS(lamarWithQT, 5)
+
+temp <- convert_LoS(lamarWithAllData) %>%
+  filter(type != 'spike') %>%
+  mutate(losGrouped = cut(yard, seq(0,100, 10))) %>%
+  filter(losGrouped %in% c('(70,80]', '(80,90]', '(90,100]')|yard == 70)
+make_Chart(temp, 'Lamar Inside 30', 'LoS', write_Tweet_Content(temp))
+ggsave(file=sprintf('%s/Lamar/Inside 30 plot.png', save), width=11.5, height=8)
+
+
+seasonDF
+
+make_Zone_Chart(all)
+
+
+all %>%
+  filter(pass_type == 'TOUCHDOWN') %>%
+  mutate(Depth = as.integer(y/10)) %>% 
+  group_by(name, Depth) %>%
+  summarize(TDs = n()) %>% 
+  pivot_wider(id_cols=name, names_from=Depth, values_from=TDs) %>%
+  replace(., is.na(.), 0) %>%
+  mutate(Total = `0` + `1` + `2` + `3` + `4` + `5` + `6`) %>%
+  arrange(-Total) %>% View()
