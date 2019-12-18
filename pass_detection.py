@@ -38,8 +38,7 @@ def map_pass_locations(centers, col, pass_type, n_empty = 0):
 	sideline = 40 # pixels
 	width = 53.33 # standard width of football field
 	center_x = col/2
-
-
+	
 	if col > 1370:
 		_75_yd_line = 0
 		LOS = 596
@@ -52,16 +51,17 @@ def map_pass_locations(centers, col, pass_type, n_empty = 0):
 		LOS = 572
 		_1_yd_x = float(col - sideline*2)/width
 		_1_yd_y = float(LOS - _55_yd_line)/55
-	
+
 	for c in centers:
 		y = c[0]
 		x = c[1]
 		y_loc = float(LOS - y)/_1_yd_y
 		x_loc = float(x - center_x)/_1_yd_x
 		if x_loc > 28:
-			print (y)
-			print (LOS - y)
-			print (x_loc)
+			pass
+			#print (y)
+			#print (LOS - y)
+			#print (x_loc)
 		df = pd.DataFrame([[pass_type, x_loc, y_loc]], columns = col_names)
 		pass_locations = pass_locations.append(df, ignore_index=True)
 
@@ -149,10 +149,9 @@ def incompletions(image, n):
 	y = np.where(res != 0)[1]
 	pairs = list(zip(x,y))
 	X = np.array(list(map(list, pairs)))
-
 	kmeans = KMeans(n_clusters=n, random_state=0).fit(X)
 	centers = kmeans.cluster_centers_
-
+	
 	wcvs = np.zeros(n)
 	for i in range(n):
 		y = int(round(centers[i][0]))
