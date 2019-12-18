@@ -96,7 +96,6 @@ def write_pass_locations(image, data, passes):
 
 	if n_inc != 0: 
 		rows_inc = incompletions(image, n_inc)
-		print (rows_inc)
 		pass_df = pass_df.append(rows_inc)
 		pass
 		
@@ -105,6 +104,9 @@ def write_pass_locations(image, data, passes):
 
 	df = pd.concat([game_df, pass_df.reset_index(drop=True)], axis=1)
 	passes = passes.append(df)
+	offField = passes[abs(passes['x']) > 27.4]
+	if not offField.empty:
+		print (offField)
 	return passes
 
 def get_Weekly_Data(week):
@@ -124,7 +126,7 @@ def get_Weekly_Data(week):
 				if not data_file.startswith("."): 
 					image = get_image(folder, data_file)
 					passes = write_pass_locations(image, os.path.join(folder, data_file), passes)
-					print (passes)
+					#print (passes)
 	passes.to_csv("Pass_Location_Data/pass_locations week {}.csv".format(week), index=False, header=True)
 	print ("Done.")
 

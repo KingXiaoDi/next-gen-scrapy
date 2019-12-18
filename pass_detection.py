@@ -34,8 +34,7 @@ def map_pass_locations(centers, col, pass_type, n_empty = 0):
 	col_names = ["pass_type", "x", "y"]
 	pass_locations = pd.DataFrame(columns = col_names)
 	if ((len(centers) == 0) and (n_empty == 0)): return pass_locations
-	print (pass_locations)
-
+	
 	sideline = 40 # pixels
 	width = 53.33 # standard width of football field
 	center_x = col/2
@@ -54,8 +53,6 @@ def map_pass_locations(centers, col, pass_type, n_empty = 0):
 		_1_yd_x = float(col - sideline*2)/width
 		_1_yd_y = float(LOS - _55_yd_line)/55
 	
-	print (_1_yd_x)
-	print (_1_yd_y)
 	for c in centers:
 		y = c[0]
 		x = c[1]
@@ -140,8 +137,7 @@ def incompletions(image, n):
 
 	image = cv2.imread(image)
 	row, col = image.shape[0:2]
-	print (image.shape)
-
+	
 	lower_white = np.array([230, 230, 230])
 	upper_white = np.array([255, 255, 255])
 
