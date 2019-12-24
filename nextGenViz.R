@@ -46,7 +46,7 @@ for (each in seq(1,4)) {
                         filter(down == each), 'all', save, sprintf('Lamar/Downs/Down %d', each))
 }
 
-lamarTD <- lamar %>%
+lamarTD <- lamarWithAllData %>%
   filter(pass_type == 'TOUCHDOWN')
 make_Composite_Charts_For_QB(lamarTD, 'Lamar Jackson', save, 'Lamar Jackson TDs')
 
@@ -110,7 +110,29 @@ all %>%
   arrange(zone, -Att) %>% View()
 make_Zone_Chart(ravensD)
 make_Zone_Chart(oppD)
+lamarDepth <- add_Depth_and_Direction(lamarWithAllData)
 
+chartSave <- make_Lamar_Chart(lamarDepth, quo(direction)) %>%
+  arrange(direction)
+write.csv(chartSave,
+          file = 'for Ken/temp.csv',
+          row.names=F)
+chartSave <- make_Lamar_Chart(lamarDepth, quo(depth)) %>%
+  arrange(depth)
+write.csv(chartSave,
+          file = 'for Ken/temp.csv',
+          row.names=F)
+chartSave <- make_Lamar_Chart(lamarDepth, quo(zone)) %>%
+  arrange(zone)
+write.csv(chartSave,
+          file = 'for Ken/temp.csv',
+          row.names=F)
+
+lamarWithAllData %>%
+  filter(y<0,
+         x< -80/9) %>%
+  select(date, q, time, gain, x, y, detail)
+160/9
 NFL <- gam(C~s(abs(x),df=6)+y, data=fitData)
 summary(NFL)
 
@@ -224,7 +246,7 @@ calculate_qb_rating_Attempts(lamarWithLoSgroup %>%
                                          AvgAirYardsAtt = mean(y, na.rm=T)) %>%
                                mutate(ComPer = round(100*Com/Att,1)))
 
-plot_Lamar_By_LoS(lamarWithQT, 5)
+plot_Lamar_By_LoS(lamarWithQT, 10)
 
 temp <- convert_LoS(lamarWithAllData) %>%
   filter(type != 'spike') %>%
