@@ -1,7 +1,6 @@
 library(gam)
 source('nflFunctions.R')
 
-
 setwd('c:/users/yoshi/documents/football/ravens/')
 setwd('c:/users/jmost/documents/football/ravens/')
 
@@ -67,14 +66,6 @@ ggsave(file=sprintf('%s/%s plot.png', save, 'Ravens D'), width=11.5, height=8)
 oppName = 'JetsD'
 make_Chart(oppD, oppName, '0', write_Tweet_Content(oppD))
 ggsave(file=sprintf('%s/%s plot.png', save, oppName), width=11.5, height=8)
-
-oppD %>%
-  summarize(Com = sum(pass_type == 'COMPLETE') + sum(pass_type == 'TOUCHDOWN'),
-            Att = n(),
-            TD = sum(pass_type == 'TOUCHDOWN'),
-            INT = sum(pass_type == 'INTERCEPTION'),
-            AvgAirYards = mean(y[pass_type %in% c('COMPLETE', 'TOUCHDOWN')]),
-            AvgAirYardsAtt = mean(y, na.rm=T))
 
 oppD %>% 
   filter(y>=-100,
@@ -162,7 +153,7 @@ xmax <- 160/6
 ymin <- -15
 ymax <- 5
 hashX <- 18.5/6
-yardMarkers <- c(-15, -10, -5, 0, 5)#, seq(10,60,10))
+yardMarkers <- seq(10,60,10)
 hashY <- seq(ymin,ymax)[which(seq(ymin,ymax)%%5!=0)]
 
 cols <- c("Andrew Dalton" = "http://content.sportslogos.net/logos/7/154/thumbs/403.gif", 
@@ -222,7 +213,6 @@ ggplot(convert_LoS(seasonDF) %>%
                 !type %in% c('kickoff', 'XP', 'FGA', 'kneel', '2PT', 'punt')), aes(yard, fill=type)) +
   geom_histogram(binwidth=5)
 
-
 calculate_qb_rating_Attempts(lamarWithLoSgroup %>%
                                group_by(losGrouped) %>%
                                summarize(Com = sum(pass_type == 'COMPLETE') + sum(pass_type == 'TOUCHDOWN'),
@@ -243,11 +233,7 @@ temp <- convert_LoS(lamarWithAllData) %>%
 make_Chart(temp, 'Lamar Inside 30', 'LoS', write_Tweet_Content(temp))
 ggsave(file=sprintf('%s/Lamar/Inside 30 plot.png', save), width=11.5, height=8)
 
-
-seasonDF
-
 make_Zone_Chart(all)
-
 
 all %>%
   filter(pass_type == 'TOUCHDOWN') %>%
@@ -258,3 +244,6 @@ all %>%
   replace(., is.na(.), 0) %>%
   mutate(Total = `0` + `1` + `2` + `3` + `4` + `5` + `6`) %>%
   arrange(-Total) %>% View()
+
+
+make_Chart_With_Target_Colors(lamarWithAllData %>% filter(down == 4), 'Lamar 2019 Down 1 Chart')
