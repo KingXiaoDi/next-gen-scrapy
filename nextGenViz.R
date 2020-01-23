@@ -269,3 +269,82 @@ all %>%
 
 
 make_Chart_With_Target_Colors(lamarWithAllData %>% filter(down == 4), 'Lamar 2019 Down 1 Chart')
+
+all <- all %>%
+  mutate(complete = case_when(pass_type %in% c('COMPLETE', 'TOUCHDOWN')~1,
+                              TRUE ~0))
+
+lamar <- all %>%
+  filter(name == 'Lamar Jackson')
+mahomes <- all %>%
+  filter(name == 'Patrick Mahomes')
+
+lamar %>%
+  filter(y >= 10,
+         y<20) %>%
+  summarize(complete = sum(complete),
+            attempt = n(),
+            TD = sum(pass_type == 'TOUCHDOWN'),
+            INT = sum(pass_type == 'INTERCEPTION'))
+
+mahomes %>%
+  filter(y >= 10,
+         y<20) %>%
+  summarize(complete = sum(complete),
+            attempt = n(),
+            TD = sum(pass_type == 'TOUCHDOWN'),
+            INT = sum(pass_type == 'INTERCEPTION'))
+
+all %>%
+  filter(y >= 10,
+         y<20) %>%
+  summarize(complete = sum(complete),
+            attempt = n(),
+            TD = sum(pass_type == 'TOUCHDOWN'),
+            INT = sum(pass_type == 'INTERCEPTION'))
+
+lamar %>%
+  filter(y >=20) %>%
+  summarize(complete = sum(complete),
+            attempt = n(),
+            TD = sum(pass_type == 'TOUCHDOWN'),
+            INT = sum(pass_type == 'INTERCEPTION'))
+
+mahomes %>%
+  filter(y >=20) %>%
+  summarize(complete = sum(complete),
+            attempt = n(),
+            TD = sum(pass_type == 'TOUCHDOWN'),
+            INT = sum(pass_type == 'INTERCEPTION'))
+
+all %>%
+  filter(y >=20) %>%
+  summarize(complete = sum(complete),
+            attempt = n(),
+            TD = sum(pass_type == 'TOUCHDOWN'),
+            INT = sum(pass_type == 'INTERCEPTION'))
+
+
+lamar %>%
+  filter(x <= -15,
+         y < 10) %>%
+  summarize(complete = sum(complete),
+            attempt = n(),
+            TD = sum(pass_type == 'TOUCHDOWN'),
+            INT = sum(pass_type == 'INTERCEPTION'))
+
+lamar %>%
+  filter(x >= 15,
+         y < 10) %>%
+  summarize(complete = sum(complete),
+            attempt = n(),
+            TD = sum(pass_type == 'TOUCHDOWN'),
+            INT = sum(pass_type == 'INTERCEPTION'))
+
+lamar %>%
+  filter(abs(x) >= 15,
+         y < 10) %>%
+  summarize(complete = sum(complete),
+            attempt = n(),
+            TD = sum(pass_type == 'TOUCHDOWN'),
+            INT = sum(pass_type == 'INTERCEPTION'))
